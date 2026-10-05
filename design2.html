@@ -1,0 +1,2887 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Vacation Exchange — Where Owners Exchange Second Homes | Est. 1997</title>
+  <meta name="description"
+    content="The Vacation Exchange Network — Vacation and second homes only. Proof of Value guarantee with no upfront payment until you arrange an exchange.">
+  <style>
+    :root {
+      --ink: #10231f;
+      --muted: #66736f;
+      --cream: #f5f1e8;
+      --paper: #fffdf8;
+      --mint: #dcefe5;
+      --green: #123d32;
+      --lime: #c7ef78;
+      --coral: #ff765f;
+      --line: rgba(16, 35, 31, .12);
+      --shadow: 0 24px 70px rgba(16, 35, 31, .13);
+      --radius: 28px;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      overflow-x: hidden;
+    }
+
+    body:has(.modal.open) {
+      overflow: hidden
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit
+    }
+
+    button {
+      cursor: pointer
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: auto
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #6d7b75
+    }
+
+    .eyebrow i {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--coral);
+      display: block
+    }
+
+    /* TOP BANNER STRIP */
+    .top-strip {
+      background: #0d221c;
+      color: #b7c7c0;
+      padding: 7px 0;
+      font-size: 11px;
+      border-bottom: 1px solid rgba(255, 255, 255, .08);
+      position: relative;
+      z-index: 60;
+    }
+
+    .top-strip .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      white-space: nowrap;
+      overflow-x: auto;
+      gap: 15px;
+    }
+
+    .top-strip strong {
+      color: #fff
+    }
+
+    .top-strip .hotline {
+      color: var(--lime);
+      font-weight: 800
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 42px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 50;
+      width: min(1160px, calc(100% - 28px));
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 11px 14px 11px 20px;
+      border: 1px solid rgba(255, 255, 255, .4);
+      background: rgba(255, 253, 248, .85);
+      backdrop-filter: blur(20px);
+      border-radius: 999px;
+      box-shadow: 0 10px 40px rgba(16, 35, 31, .08);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-weight: 900;
+      letter-spacing: -.03em
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--green);
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .brand-mark:before,
+    .brand-mark:after {
+      content: "";
+      position: absolute;
+      border: 2px solid var(--lime);
+      border-radius: 50%
+    }
+
+    .brand-mark:before {
+      width: 17px;
+      height: 17px;
+      left: 5px;
+      top: 5px
+    }
+
+    .brand-mark:after {
+      width: 12px;
+      height: 12px;
+      right: 4px;
+      bottom: 4px
+    }
+
+    .brand-text small {
+      display: block;
+      font-size: 10px;
+      color: var(--muted);
+      font-weight: 600;
+      letter-spacing: normal;
+      margin-top: -2px;
+    }
+
+    .navlinks {
+      display: flex;
+      gap: 22px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #42514c;
+      white-space: nowrap;
+    }
+
+    .navlinks a {
+      transition: .2s
+    }
+
+    .navlinks a:hover,
+    .navlinks a.current {
+      color: var(--green)
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px
+    }
+
+    .pill-btn {
+      border: 0;
+      border-radius: 999px;
+      padding: 10px 16px;
+      font-weight: 800;
+      font-size: 12px;
+      transition: .25s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    .pill-btn.dark {
+      background: var(--green);
+      color: white
+    }
+
+    .pill-btn.light {
+      background: #fff;
+      color: var(--ink);
+      border: 1px solid var(--line)
+    }
+
+    .pill-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(16, 35, 31, .12)
+    }
+
+    .menu {
+      display: none;
+      background: none;
+      border: 0;
+      font-size: 24px
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 840px;
+      padding: 150px 0 70px;
+      position: relative;
+      display: flex;
+      align-items: center
+    }
+
+    .hero:before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 740px;
+      background:
+        radial-gradient(circle at 72% 28%, rgba(199, 239, 120, .58), transparent 25%),
+        radial-gradient(circle at 8% 65%, rgba(255, 118, 95, .12), transparent 22%);
+      pointer-events: none
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 55px;
+      align-items: center;
+      position: relative
+    }
+
+    h1 {
+      font-size: clamp(52px, 6.8vw, 88px);
+      line-height: .92;
+      letter-spacing: -.07em;
+      margin: 18px 0 25px;
+      max-width: 720px
+    }
+
+    h1 em {
+      font-family: Georgia, serif;
+      font-weight: 400;
+      letter-spacing: -.07em;
+      color: #52705f
+    }
+
+    .hero-copy {
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--muted);
+      max-width: 540px
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin-top: 30px
+    }
+
+    .hero-cta .pill-btn {
+      padding: 14px 22px;
+      font-size: 13px
+    }
+
+    .mini-proof {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 24px;
+      font-size: 12px;
+      color: #61706b
+    }
+
+    .avatars {
+      display: flex
+    }
+
+    .avatars span {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 2px solid var(--cream);
+      margin-left: -7px;
+      display: grid;
+      place-items: center;
+      font-size: 12px;
+      font-weight: 800;
+      background: #b8d2c3
+    }
+
+    .avatars span:first-child {
+      margin-left: 0;
+      background: #e9a68d
+    }
+
+    .avatars span:nth-child(3) {
+      background: #d8bc8b
+    }
+
+    .hero-visual {
+      position: relative;
+      height: 560px
+    }
+
+    /* HOUSE EXTERIORS ONLY */
+    .hero-photo {
+      position: absolute;
+      right: 0;
+      top: 15px;
+      width: 84%;
+      height: 510px;
+      border-radius: 42% 42% 25px 25px;
+      background:
+        linear-gradient(180deg, transparent 40%, rgba(10, 30, 25, .55)),
+        url("https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1100&q=85") center/cover;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s ease;
+    }
+
+    .hero-photo:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: 0 32px 80px rgba(16, 35, 31, .2);
+    }
+
+    .hero-photo:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255, 255, 255, .18), transparent 40%)
+    }
+
+    .floating-card {
+      position: absolute;
+      left: 0;
+      bottom: 15px;
+      width: 275px;
+      padding: 17px;
+      background: rgba(255, 253, 248, .92);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, .8);
+      border-radius: 22px;
+      box-shadow: 0 22px 50px rgba(16, 35, 31, .18);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+    }
+
+    .floating-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 28px 60px rgba(16, 35, 31, .24);
+    }
+
+    .floating-card .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center
+    }
+
+    .tag {
+      font-size: 10px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--lime)
+    }
+
+    .heart {
+      width: 32px;
+      height: 32px;
+      border: 0;
+      border-radius: 50%;
+      background: #fff;
+      font-size: 16px;
+      transition: transform 0.2s ease;
+    }
+
+    .heart:hover {
+      transform: scale(1.15);
+    }
+
+    .floating-card h3 {
+      font-size: 17px;
+      margin: 12px 0 4px;
+      letter-spacing: -.03em
+    }
+
+    .floating-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 11px
+    }
+
+    .float-stat {
+      position: absolute;
+      right: -10px;
+      top: 45px;
+      background: var(--green);
+      color: white;
+      padding: 14px 18px;
+      border-radius: 18px;
+      font-size: 11px;
+      box-shadow: 0 18px 35px rgba(16, 35, 31, .2);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .float-stat:hover {
+      transform: translateY(-4px) scale(1.03);
+    }
+
+    .float-stat strong {
+      display: block;
+      font-size: 24px;
+      color: var(--lime);
+      letter-spacing: -.05em
+    }
+
+    /* SEARCH */
+    .search-wrap {
+      margin-top: -45px;
+      position: relative;
+      z-index: 4
+    }
+
+    .searchbox {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 25px;
+      padding: 10px;
+      box-shadow: 0 24px 60px rgba(16, 35, 31, .11);
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr auto;
+      gap: 8px;
+      transition: box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+
+    .searchbox:hover {
+      box-shadow: 0 30px 75px rgba(16, 35, 31, .15);
+      border-color: rgba(18, 61, 50, .2);
+    }
+
+    .field {
+      padding: 13px 16px;
+      border-radius: 17px;
+      background: #f7f5ef;
+      border: 1px solid transparent;
+      transition: .25s ease;
+    }
+
+    .field:hover {
+      background: #f1ede3;
+    }
+
+    .field:focus-within {
+      border-color: #a5c995;
+      background: #fff;
+      box-shadow: 0 4px 15px rgba(18, 61, 50, .06);
+    }
+
+    .field label {
+      display: block;
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-weight: 900;
+      color: #79847f;
+      margin-bottom: 5px
+    }
+
+    .field input,
+    .field select {
+      border: 0;
+      background: transparent;
+      outline: 0;
+      width: 100%;
+      font-weight: 750;
+      color: var(--ink);
+      font-size: 13px
+    }
+
+    .search-btn {
+      border: 0;
+      border-radius: 18px;
+      background: var(--green);
+      color: #fff;
+      padding: 0 24px;
+      font-weight: 850;
+      transition: .25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .search-btn:hover {
+      background: #1c5143;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(18, 61, 50, .25);
+    }
+
+    /* MARQUEE */
+    .marquee {
+      padding: 55px 0 25px;
+      overflow: hidden
+    }
+
+    .marquee-track {
+      display: flex;
+      gap: 50px;
+      width: max-content;
+      animation: scroll 28s linear infinite
+    }
+
+    .marquee-item {
+      font-size: 12px;
+      font-weight: 850;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      color: #8b968f;
+      display: flex;
+      align-items: center;
+      gap: 50px
+    }
+
+    .marquee-item:after {
+      content: "✦";
+      color: var(--coral);
+      font-size: 15px
+    }
+
+    @keyframes scroll {
+      to {
+        transform: translateX(-50%)
+      }
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 90px 0
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      align-items: end;
+      margin-bottom: 35px
+    }
+
+    .section-head h2 {
+      font-size: clamp(38px, 4.8vw, 60px);
+      line-height: .95;
+      letter-spacing: -.065em;
+      margin: 10px 0 0
+    }
+
+    .section-head p {
+      max-width: 420px;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 14px
+    }
+
+    /* 6 OFFICIAL CATEGORIES */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 12px
+    }
+
+    .category {
+      height: 220px;
+      border-radius: 24px;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: end;
+      padding: 16px;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+      cursor: pointer
+    }
+
+    .category:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(transparent 30%, rgba(6, 20, 17, .82));
+      transition: opacity 0.35s ease;
+    }
+
+    .category:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 18px 45px rgba(16, 35, 31, .22);
+    }
+
+    .category:hover:before {
+      opacity: 0.92;
+    }
+
+    .category:nth-child(1) {
+      background-image: url("https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80")
+    }
+
+    .category:nth-child(2) {
+      background-image: url("https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=600&q=80")
+    }
+
+    .category:nth-child(3) {
+      background-image: url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80")
+    }
+
+    .category:nth-child(4) {
+      background-image: url("https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=600&q=80")
+    }
+
+    .category:nth-child(5) {
+      background-image: url("https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80")
+    }
+
+    .category:nth-child(6) {
+      background-image: url("https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80")
+    }
+
+    .category-content {
+      position: relative;
+      color: white;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .category:hover .category-content {
+      transform: translateY(-2px);
+    }
+
+    .category small {
+      font-size: 10px;
+      opacity: .75;
+      font-weight: 800
+    }
+
+    .category h3 {
+      margin: 3px 0 0;
+      font-size: 16px;
+      letter-spacing: -.03em
+    }
+
+    /* HOW SECTION */
+    .how {
+      background: var(--green);
+      color: white;
+      border-radius: 45px;
+      margin: 25px auto;
+      width: min(1380px, calc(100% - 30px));
+      padding: 85px 0
+    }
+
+    .how .section-head p {
+      color: #afc1b9
+    }
+
+    .how .eyebrow {
+      color: #a8bdb4
+    }
+
+    .how .section-head h2 {
+      color: white
+    }
+
+    .exchange-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px
+    }
+
+    .exchange-card {
+      min-height: 420px;
+      padding: 34px;
+      border-radius: 28px;
+      background: #1b4b3e;
+      border: 1px solid rgba(255, 255, 255, .1);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+
+    .exchange-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 24px 60px rgba(6, 20, 17, .35);
+      border-color: rgba(199, 239, 120, .3);
+    }
+
+    .exchange-card.alt {
+      background: #dcefe5;
+      color: var(--ink)
+    }
+
+    .exchange-card.alt:hover {
+      border-color: rgba(18, 61, 50, .25);
+      box-shadow: 0 24px 60px rgba(16, 35, 31, .15);
+    }
+
+    .exchange-card .number {
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .12em;
+      opacity: .7
+    }
+
+    .exchange-card h3 {
+      font-size: 38px;
+      letter-spacing: -.06em;
+      margin: 30px 0 12px
+    }
+
+    .exchange-card p {
+      max-width: 440px;
+      line-height: 1.65;
+      color: #b6c8c1;
+      font-size: 14px
+    }
+
+    .alt p {
+      color: #65736e
+    }
+
+    .diagram {
+      position: absolute;
+      right: 25px;
+      bottom: 25px;
+      width: 190px;
+      height: 120px
+    }
+
+    .node {
+      position: absolute;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 10px;
+      font-weight: 900;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    .node.one {
+      width: 74px;
+      height: 74px;
+      background: var(--lime);
+      color: var(--ink);
+      left: 0;
+      top: 25px
+    }
+
+    .node.two {
+      width: 74px;
+      height: 74px;
+      background: #f9e4d9;
+      color: var(--ink);
+      right: 0;
+      top: 25px
+    }
+
+    .arrow {
+      position: absolute;
+      left: 65px;
+      top: 54px;
+      width: 60px;
+      border-top: 2px dashed currentColor
+    }
+
+    .arrow:after {
+      content: "→";
+      position: absolute;
+      right: -8px;
+      top: -13px;
+      font-size: 20px
+    }
+
+    .credit {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      padding: 6px 11px;
+      border-radius: 999px;
+      background: var(--coral);
+      color: white;
+      font-size: 9px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    /* HOUSE LISTINGS GRID & REACTIVE HOVER */
+    .listing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px
+    }
+
+    .listing {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 27px;
+      overflow: hidden;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+      cursor: pointer;
+    }
+
+    .listing:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 28px 65px rgba(16, 35, 31, .16);
+      border-color: rgba(18, 61, 50, .28);
+    }
+
+    .listing-img {
+      height: 250px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .listing:hover .listing-img {
+      transform: scale(1.035);
+    }
+
+    .listing-img-wrap {
+      overflow: hidden;
+      border-radius: 26px 26px 0 0;
+    }
+
+    .save {
+      position: absolute;
+      right: 14px;
+      top: 14px;
+      width: 36px;
+      height: 36px;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .92);
+      font-size: 16px;
+      display: grid;
+      place-items: center;
+      transition: transform 0.2s ease, background 0.2s ease;
+      z-index: 2;
+    }
+
+    .save:hover {
+      transform: scale(1.15);
+      background: #fff;
+    }
+
+    .listing-body {
+      padding: 18px;
+      position: relative;
+      z-index: 2;
+      background: var(--paper);
+    }
+
+    .listing-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px
+    }
+
+    .listing h3 {
+      margin: 0;
+      font-size: 18px;
+      letter-spacing: -.03em;
+      transition: color 0.2s ease;
+    }
+
+    .listing:hover h3 {
+      color: var(--green);
+    }
+
+    .listing .location {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 4px
+    }
+
+    .rating {
+      font-size: 11px;
+      font-weight: 900
+    }
+
+    .features {
+      display: flex;
+      gap: 13px;
+      color: #71807a;
+      font-size: 11px;
+      margin: 15px 0
+    }
+
+    .listing-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--line);
+      padding-top: 14px
+    }
+
+    .exchange-label {
+      font-size: 10px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: #71807a
+    }
+
+    .view {
+      font-size: 12px;
+      font-weight: 900;
+      transition: transform 0.2s ease, color 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    .listing:hover .view {
+      transform: translateX(4px);
+      color: var(--green);
+    }
+
+    /* VALUE & AUTHENTIC VEN FEES */
+    .value-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 60px;
+      align-items: center
+    }
+
+    .value-copy h2 {
+      font-size: clamp(38px, 4.6vw, 60px);
+      line-height: .95;
+      letter-spacing: -.065em;
+      margin: 12px 0 20px
+    }
+
+    .value-copy>p {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 15px;
+      max-width: 520px
+    }
+
+    .checks {
+      display: grid;
+      gap: 12px;
+      margin-top: 25px
+    }
+
+    .check {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      font-size: 13px;
+      font-weight: 750
+    }
+
+    .check b {
+      display: grid;
+      place-items: center;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: var(--lime)
+    }
+
+    .fee-card {
+      background: #f0e9db;
+      border-radius: 35px;
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+    }
+
+    .fee-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 60px rgba(16, 35, 31, .14);
+    }
+
+    .fee-card:after {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: var(--lime);
+      right: -100px;
+      top: -100px
+    }
+
+    .fee-card h3 {
+      font-size: 30px;
+      letter-spacing: -.05em;
+      margin: 0 0 7px;
+      position: relative;
+      z-index: 1
+    }
+
+    .fee-card>p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+      max-width: 440px;
+      position: relative;
+      z-index: 1
+    }
+
+    .fee-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      border-top: 1px solid rgba(16, 35, 31, .12);
+      position: relative;
+      z-index: 1;
+      transition: transform 0.2s ease;
+    }
+
+    .fee-row:hover {
+      transform: translateX(4px);
+    }
+
+    .fee-row span:first-child {
+      font-weight: 750;
+      font-size: 13px
+    }
+
+    .fee-row strong {
+      font-size: 24px;
+      letter-spacing: -.04em
+    }
+
+    .fee-row small {
+      display: block;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 600;
+      margin-top: 3px
+    }
+
+    /* STORY */
+    .story-card {
+      min-height: 480px;
+      border-radius: 38px;
+      overflow: hidden;
+      position: relative;
+      background:
+        linear-gradient(90deg, rgba(10, 30, 25, .88), rgba(10, 30, 25, .25)),
+        url("https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1600&q=85") center/cover;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 60px;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+    }
+
+    .story-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 30px 75px rgba(10, 30, 25, .3);
+    }
+
+    .story-card div {
+      max-width: 580px
+    }
+
+    .story-card h2 {
+      font-size: clamp(38px, 4.8vw, 64px);
+      line-height: .95;
+      letter-spacing: -.07em;
+      margin: 14px 0 20px
+    }
+
+    .story-card p {
+      color: #d7e2dd;
+      line-height: 1.7;
+      font-size: 15px
+    }
+
+    .quote {
+      margin-top: 25px;
+      padding-left: 17px;
+      border-left: 2px solid var(--lime);
+      font-size: 13px;
+      font-weight: 700
+    }
+
+    /* FAQ */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: .7fr 1.3fr;
+      gap: 60px
+    }
+
+    .faq-grid h2 {
+      font-size: 52px;
+      line-height: .95;
+      letter-spacing: -.065em;
+      margin: 12px 0
+    }
+
+    .faq-list {
+      border-top: 1px solid var(--line)
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--line);
+      transition: background 0.2s ease;
+    }
+
+    .faq-item:hover {
+      background: rgba(255, 255, 255, .3);
+    }
+
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: 0;
+      padding: 20px 0;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 800;
+      color: var(--ink);
+      font-size: 14px;
+    }
+
+    .plus {
+      font-size: 22px;
+      transition: .25s
+    }
+
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 13px;
+      transition: max-height .35s
+    }
+
+    .faq-a p {
+      margin: 0 0 20px
+    }
+
+    .faq-item.open .faq-a {
+      max-height: 220px
+    }
+
+    .faq-item.open .plus {
+      transform: rotate(45deg)
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0b211b;
+      color: white;
+      padding: 65px 0 25px
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 50px;
+      padding-bottom: 50px;
+      border-bottom: 1px solid rgba(255, 255, 255, .12)
+    }
+
+    .footer-brand {
+      max-width: 400px
+    }
+
+    .footer-brand h2 {
+      font-size: 38px;
+      letter-spacing: -.06em;
+      margin: 15px 0
+    }
+
+    .footer-brand p {
+      color: #9eb2aa;
+      line-height: 1.6;
+      font-size: 13px
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 65px
+    }
+
+    .footer-col {
+      display: grid;
+      gap: 12px;
+      align-content: start
+    }
+
+    .footer-col strong {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: #81958d;
+      margin-bottom: 4px
+    }
+
+    .footer-col a {
+      font-size: 12px;
+      color: #c6d3ce;
+      transition: color 0.2s ease;
+    }
+
+    .footer-col a:hover {
+      color: var(--lime);
+    }
+
+    .footer-bottom {
+      padding-top: 22px;
+      display: flex;
+      justify-content: space-between;
+      color: #6f8780;
+      font-size: 10px
+    }
+
+    /* MODALS & TOAST */
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 20, 16, .65);
+      backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      padding: 20px
+    }
+
+    .modal.open {
+      display: flex
+    }
+
+    .modal-box {
+      width: min(580px, 100%);
+      background: var(--paper);
+      border-radius: 30px;
+      padding: 32px;
+      box-shadow: var(--shadow);
+      position: relative;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .close {
+      position: absolute;
+      right: 17px;
+      top: 17px;
+      width: 36px;
+      height: 36px;
+      border: 0;
+      border-radius: 50%;
+      background: #f0eee7;
+      font-size: 20px;
+      transition: transform 0.2s ease;
+    }
+
+    .close:hover {
+      transform: rotate(90deg);
+    }
+
+    .modal-box h2 {
+      font-size: 36px;
+      line-height: .95;
+      letter-spacing: -.06em;
+      margin: 14px 0 10px
+    }
+
+    .modal-box p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 20px
+    }
+
+    .form-grid .full {
+      grid-column: 1/-1
+    }
+
+    .form-input {
+      width: 100%;
+      border: 1px solid var(--line);
+      background: #f8f6f0;
+      border-radius: 14px;
+      padding: 13px;
+      outline: none;
+      font-size: 13px;
+      transition: border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .form-input:focus {
+      border-color: #91b681;
+      background: white
+    }
+
+    .modal-submit {
+      width: 100%;
+      margin-top: 14px;
+      border: 0;
+      border-radius: 15px;
+      background: var(--green);
+      color: white;
+      padding: 15px;
+      font-weight: 850;
+      transition: transform 0.25s ease, background 0.25s ease;
+    }
+
+    .modal-submit:hover {
+      background: #1c5143;
+      transform: translateY(-2px);
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 25px;
+      left: 50%;
+      transform: translate(-50%, 20px);
+      background: var(--green);
+      color: white;
+      padding: 13px 20px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 750;
+      opacity: 0;
+      pointer-events: none;
+      transition: .3s;
+      z-index: 120
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translate(-50%, 0)
+    }
+
+    /* SPA PAGES */
+    .page {
+      display: none;
+      min-height: 100vh;
+      animation: pageIn .45s ease both
+    }
+
+    .page.active {
+      display: block
+    }
+
+    @keyframes pageIn {
+      from {
+        opacity: 0;
+        transform: translateY(16px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    .page-hero {
+      padding: 160px 0 75px;
+      position: relative;
+      overflow: hidden
+    }
+
+    .page-hero:before {
+      content: "";
+      position: absolute;
+      width: 520px;
+      height: 520px;
+      border-radius: 50%;
+      background: var(--lime);
+      opacity: .25;
+      right: -180px;
+      top: 80px
+    }
+
+    .page-hero h1 {
+      max-width: 800px
+    }
+
+    .page-intro {
+      max-width: 660px;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 16px
+    }
+
+    .explore-tools {
+      display: flex;
+      gap: 9px;
+      flex-wrap: wrap;
+      margin: 26px 0
+    }
+
+    .filter-chip {
+      border: 1px solid var(--line);
+      background: var(--paper);
+      padding: 9px 15px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      transition: .2s
+    }
+
+    .filter-chip:hover,
+    .filter-chip.active {
+      background: var(--green);
+      color: white;
+      border-color: var(--green)
+    }
+
+    .big-search {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      background: var(--paper);
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: 0 18px 45px rgba(16, 35, 31, .08);
+      margin-top: 25px;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .big-search:hover {
+      box-shadow: 0 24px 55px rgba(16, 35, 31, .12);
+    }
+
+    .big-search input {
+      border: 0;
+      background: #f6f4ee;
+      border-radius: 15px;
+      padding: 14px 18px;
+      outline: 0
+    }
+
+    /* DESTINATION CARDS HOVER */
+    .destination-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 25px
+    }
+
+    .destination-card {
+      height: 270px;
+      border-radius: 26px;
+      overflow: hidden;
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+      cursor: pointer;
+    }
+
+    .destination-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(5, 20, 16, .35);
+    }
+
+    .destination-card:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(transparent 35%, rgba(5, 20, 16, .8));
+      transition: opacity 0.3s ease;
+    }
+
+    .destination-card:hover:after {
+      opacity: 0.92;
+    }
+
+    .destination-card div {
+      position: absolute;
+      z-index: 1;
+      bottom: 20px;
+      left: 20px;
+      color: white;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .destination-card:hover div {
+      transform: translateY(-3px);
+    }
+
+    .destination-card h3 {
+      font-size: 22px;
+      letter-spacing: -.05em;
+      margin: 4px 0
+    }
+
+    .destination-card small {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-weight: 800
+    }
+
+    /* PROCESS CARDS HOVER */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 35px
+    }
+
+    .process-card {
+      padding: 26px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      min-height: 280px;
+      position: relative;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+
+    .process-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 20px 50px rgba(16, 35, 31, .11);
+      border-color: rgba(18, 61, 50, .25);
+    }
+
+    .process-card .num {
+      font-size: 12px;
+      font-weight: 900;
+      color: #8b968f
+    }
+
+    .process-card .icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 16px;
+      background: var(--lime);
+      display: grid;
+      place-items: center;
+      font-size: 22px;
+      margin: 25px 0 18px;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .process-card:hover .icon {
+      transform: scale(1.1) rotate(4deg);
+    }
+
+    .process-card h3 {
+      font-size: 21px;
+      letter-spacing: -.05em;
+      margin: 0 0 9px
+    }
+
+    .process-card p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6
+    }
+
+    .timeline {
+      margin-top: 55px;
+      border-left: 1px solid var(--line);
+      padding-left: 30px;
+      display: grid;
+      gap: 30px
+    }
+
+    .timeline-item {
+      position: relative;
+      transition: transform 0.25s ease;
+    }
+
+    .timeline-item:hover {
+      transform: translateX(4px);
+    }
+
+    .timeline-item:before {
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background: var(--coral);
+      border-radius: 50%;
+      left: -37px;
+      top: 4px;
+      box-shadow: 0 0 0 6px var(--cream)
+    }
+
+    .timeline-item h3 {
+      margin: 0 0 7px;
+      font-size: 19px
+    }
+
+    .timeline-item p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 13px;
+      max-width: 650px
+    }
+
+    /* ABOUT PANELS HOVER */
+    .about-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      align-items: stretch
+    }
+
+    .about-panel {
+      padding: 38px;
+      border-radius: 32px;
+      background: var(--green);
+      color: white;
+      min-height: 400px;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+    }
+
+    .about-panel:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 25px 60px rgba(18, 61, 50, .25);
+    }
+
+    .about-panel.light {
+      background: #e4efe7;
+      color: var(--ink);
+      border: 1px solid var(--line);
+    }
+
+    .about-panel.light:hover {
+      box-shadow: 0 25px 60px rgba(16, 35, 31, .12);
+    }
+
+    .about-panel h2 {
+      font-size: 42px;
+      line-height: .96;
+      letter-spacing: -.065em;
+      margin: 15px 0
+    }
+
+    .about-panel p {
+      line-height: 1.7;
+      color: #b7c8c1;
+      font-size: 14px
+    }
+
+    .about-panel.light p {
+      color: var(--muted)
+    }
+
+    /* STATS BOX HOVER */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 18px
+    }
+
+    .stat-box {
+      padding: 24px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .stat-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 40px rgba(16, 35, 31, .1);
+      border-color: rgba(18, 61, 50, .25);
+    }
+
+    .stat-box strong {
+      font-size: 32px;
+      letter-spacing: -.06em;
+      display: block;
+      transition: color 0.2s ease;
+    }
+
+    .stat-box:hover strong {
+      color: var(--green);
+    }
+
+    .stat-box span {
+      font-size: 11px;
+      color: var(--muted);
+      line-height: 1.4;
+      display: block;
+      margin-top: 5px
+    }
+
+    .page-cta {
+      margin-top: 50px;
+      border-radius: 35px;
+      background: var(--lime);
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+    }
+
+    .page-cta:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 25px 60px rgba(199, 239, 120, .35);
+    }
+
+    .page-cta h2 {
+      margin: 0;
+      font-size: 38px;
+      letter-spacing: -.06em;
+      line-height: .95
+    }
+
+    .page-cta p {
+      margin: 8px 0 0;
+      font-size: 13px;
+      color: #536350
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:980px) {
+
+      .destination-grid,
+      .process-grid,
+      .stats-grid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .about-split {
+        grid-template-columns: 1fr
+      }
+
+      .page-cta {
+        display: block
+      }
+
+      .page-cta .pill-btn {
+        margin-top: 20px
+      }
+
+      .navlinks {
+        display: none
+      }
+
+      .menu {
+        display: block
+      }
+
+      .nav-actions .light {
+        display: none
+      }
+
+      .hero {
+        padding-top: 130px;
+        min-height: auto;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 30px
+      }
+
+      .hero-visual {
+        height: 520px
+      }
+
+      .hero-photo {
+        width: 88%
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(3, 1fr)
+      }
+
+      .exchange-grid,
+      .value-grid,
+      .faq-grid {
+        grid-template-columns: 1fr
+      }
+
+      .listing-grid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .searchbox {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .search-btn {
+        min-height: 50px
+      }
+
+      .footer-top {
+        flex-direction: column
+      }
+
+      .footer-links {
+        flex-wrap: wrap
+      }
+    }
+
+    @media(max-width:640px) {
+
+      .destination-grid,
+      .process-grid,
+      .stats-grid {
+        grid-template-columns: 1fr
+      }
+
+      .big-search {
+        grid-template-columns: 1fr
+      }
+
+      .container {
+        width: min(100% - 24px, 1180px)
+      }
+
+      nav {
+        top: 36px;
+        width: calc(100% - 16px)
+      }
+
+      .hero-visual {
+        height: 410px
+      }
+
+      .hero-photo {
+        height: 380px;
+        width: 92%;
+        border-radius: 35% 35% 22px 22px
+      }
+
+      .floating-card {
+        width: 220px;
+        left: -2px
+      }
+
+      .float-stat {
+        right: -5px;
+        top: 25px
+      }
+
+      .search-wrap {
+        margin-top: 10px
+      }
+
+      .searchbox {
+        grid-template-columns: 1fr
+      }
+
+      .category-grid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .listing-grid {
+        grid-template-columns: 1fr
+      }
+
+      .story-card {
+        padding: 35px;
+        min-height: 480px
+      }
+
+      .footer-links {
+        gap: 35px
+      }
+
+      .footer-bottom {
+        display: block
+      }
+
+      .footer-bottom span {
+        display: block;
+        margin-top: 6px
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr
+      }
+
+      .form-grid .full {
+        grid-column: auto
+      }
+
+      h1 {
+        font-size: 52px
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP CONCIERGE MARQUEE STRIP (STRICTLY 1 LINE) -->
+  <div class="top-strip">
+    <div class="container">
+      <div>
+        <span>The Vacation Exchange Network (VEN)</span> — <strong>Est. 1997 • Vacation & Second Homes Only</strong>
+      </div>
+      <div>
+        <span>Call Coordinators: <a href="tel:561-509-0126" class="hotline">561-509-0126</a> (40+ Years Combined
+          Service)</span>
+        <span style="margin: 0 10px; opacity: .4">|</span>
+        <span style="color: var(--lime); font-weight: 750">Proof of Value: No payment unless you arrange an
+          exchange</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING EDITORIAL PILL NAVBAR -->
+  <nav>
+    <a href="#home" data-page="home" class="brand">
+      <span class="brand-mark"></span>
+      <div class="brand-text">
+        <span>The Vacation Exchange</span>
+        <small>Where Owners Exchange Second Homes</small>
+      </div>
+    </a>
+    <div class="navlinks">
+      <a href="#home" data-page="home">Home</a>
+      <a href="#explore" data-page="explore">Explore Homes</a>
+      <a href="#how-it-works" data-page="how">How It Works & Fees</a>
+      <a href="#about" data-page="about">Unique Features & Why Us</a>
+    </div>
+    <div class="nav-actions">
+      <button class="pill-btn light" onclick="openModal('login')">Member Login</button>
+      <button class="pill-btn dark" onclick="openModal('join')">List Your Vacation Home ↗</button>
+      <button class="menu" onclick="showToast('Menu: Select Explore, How It Works, or Unique Features')"
+        aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- #################### PAGE 1: HOME #################### -->
+  <section class="page active" id="page-home" data-page-view="home">
+    <header class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow"><i></i> Proof of value guarantee</span>
+          <h1>Your second home can take you <em>anywhere.</em></h1>
+          <p class="hero-copy">
+            Specializing exclusively in vacation and second homes since 1997. Arrange exchanges where and when you want,
+            without having to find someone to use your home at the same time. Never pay for lodging again.
+          </p>
+          <div class="hero-cta">
+            <button class="pill-btn dark" onclick="showPage('explore')">Explore verified homes ↗</button>
+            <button class="pill-btn light" onclick="openModal('join')">List your vacation home ($0 upfront)</button>
+          </div>
+          <div class="mini-proof">
+            <div class="avatars"><span>J</span><span>M</span><span>A</span><span>+</span></div>
+            <span>Thousands of sole-ownership second home owners traveling lodging-free</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-photo"></div>
+          <div class="float-stat"><strong>1997</strong>The gold standard in<br>vacation home exchange</div>
+          <div class="floating-card">
+            <div class="top"><span class="tag">Beach Resort</span><button class="heart"
+                onclick="toggleHeart(this)">♡</button></div>
+            <h3>Modern Beachfront Villa</h3>
+            <p>Malibu, California · 4 bedrooms · Deed verified</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container search-wrap">
+      <div class="searchbox">
+        <div class="field">
+          <label>Where do you want to go?</label>
+          <input id="destination" placeholder="Try Maui, Aspen, London, Lake Tahoe...">
+        </div>
+        <div class="field">
+          <label>Property Category</label>
+          <select id="homeCategorySelect">
+            <option value="all">All 6 categories</option>
+            <option value="Beach">Beach Properties</option>
+            <option value="Mountain/Ski">Mountain & Ski Chalets</option>
+            <option value="International">International Villas</option>
+            <option value="Lake & River">Lake & River Lodges</option>
+            <option value="Desert">Desert Retreats</option>
+            <option value="Urban">Urban City Flats</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Exchange Mechanism</label>
+          <select>
+            <option>Direct or Indirect Exchange</option>
+            <option>Direct (Non-Simultaneous)</option>
+            <option>Indirect (Exchange Credits)</option>
+          </select>
+        </div>
+        <button class="search-btn" onclick="searchHomes()">Search homes →</button>
+      </div>
+    </div>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="marquee-item">Vacation homes only</span>
+        <span class="marquee-item">Direct exchange ($250/trip)</span>
+        <span class="marquee-item">Indirect exchange ($500/week)</span>
+        <span class="marquee-item">Earn $250 exchange credit</span>
+        <span class="marquee-item">Call coordinators: 561-509-0126</span>
+        <span class="marquee-item">First year waived with 4+ photos</span>
+        <span class="marquee-item">Vacation homes only</span>
+        <span class="marquee-item">Direct exchange ($250/trip)</span>
+        <span class="marquee-item">Indirect exchange ($500/week)</span>
+        <span class="marquee-item">Earn $250 exchange credit</span>
+      </div>
+    </div>
+
+    <!-- 6 AUTHENTIC CATEGORIES -->
+    <section id="discover">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow"><i></i> Authentic network listings</span>
+            <h2>Travel by<br>setting.</h2>
+          </div>
+          <p>Every home in our network is a dedicated vacation home. Explore our six official property classifications
+            across the USA and international resorts.</p>
+        </div>
+        <div class="category-grid">
+          <div class="category" onclick="filterCategory('Beach')">
+            <div class="category-content"><small>01</small>
+              <h3>Beach</h3>
+            </div>
+          </div>
+          <div class="category" onclick="filterCategory('Desert')">
+            <div class="category-content"><small>02</small>
+              <h3>Desert</h3>
+            </div>
+          </div>
+          <div class="category" onclick="filterCategory('International')">
+            <div class="category-content"><small>03</small>
+              <h3>International</h3>
+            </div>
+          </div>
+          <div class="category" onclick="filterCategory('Lake & River')">
+            <div class="category-content"><small>04</small>
+              <h3>Lake & River</h3>
+            </div>
+          </div>
+          <div class="category" onclick="filterCategory('Mountain/Ski')">
+            <div class="category-content"><small>05</small>
+              <h3>Mountain / Ski</h3>
+            </div>
+          </div>
+          <div class="category" onclick="filterCategory('Urban')">
+            <div class="category-content"><small>06</small>
+              <h3>Urban</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- #################### PAGE 2: EXPLORE HOMES (HOUSE EXTERIORS ONLY) #################### -->
+  <section class="page" id="page-explore" data-page-view="explore">
+    <div class="page-hero">
+      <div class="container">
+        <span class="eyebrow"><i></i> Verified second homes</span>
+        <h1>Find a retreat<br>that feels <em>extraordinary.</em></h1>
+        <p class="page-intro">
+          Browse exclusively second homes and holiday villas. Because owners do not reside in these properties
+          day-to-day, booking is completely free of the scheduling locks of primary homes.
+        </p>
+        <div class="big-search">
+          <input id="exploreSearch" placeholder="Search Malibu, Aspen, Lake Tahoe, Marbella, London..."
+            onkeydown="if(event.key==='Enter') runExploreSearch()">
+          <button class="pill-btn dark" onclick="runExploreSearch()">Search homes ↗</button>
+        </div>
+        <div class="explore-tools">
+          <button class="filter-chip active" onclick="exploreFilter('all',this)">All categories</button>
+          <button class="filter-chip" onclick="exploreFilter('Beach',this)">Beach</button>
+          <button class="filter-chip" onclick="exploreFilter('Mountain/Ski',this)">Mountain / Ski</button>
+          <button class="filter-chip" onclick="exploreFilter('International',this)">International</button>
+          <button class="filter-chip" onclick="exploreFilter('Lake & River',this)">Lake & River</button>
+          <button class="filter-chip" onclick="exploreFilter('Desert',this)">Desert</button>
+          <button class="filter-chip" onclick="exploreFilter('Urban',this)">Urban</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- LISTING GRID: HOUSE EXTERIORS ONLY -->
+    <section id="homes" style="padding-top: 10px;">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow"><i></i> Available for direct or indirect exchange</span>
+            <h2>Fresh from<br>the network.</h2>
+          </div>
+          <button class="pill-btn dark" onclick="openModal('join')">List your vacation home ↗</button>
+        </div>
+
+        <div class="listing-grid" id="listingGrid">
+          <!-- House 1: Beach -->
+          <article class="listing" data-type="Beach"
+            onclick="viewPropertyDetails('Modern Beachfront Retreat', 'Malibu, California', '4 beds, 4 baths · Direct or Indirect', 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=85')">
+            <div class="listing-img-wrap">
+              <div class="listing-img"
+                style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=85')">
+                <button class="save" onclick="event.stopPropagation(); toggleHeart(this)">♡</button>
+              </div>
+            </div>
+            <div class="listing-body">
+              <div class="listing-top">
+                <div>
+                  <h3>Modern Beachfront Retreat</h3>
+                  <div class="location">Malibu, California, USA</div>
+                </div>
+                <div class="rating">★ 4.95</div>
+              </div>
+              <div class="features"><span>4 bedrooms</span><span>4 baths</span><span>Ocean Terrace</span></div>
+              <div class="listing-bottom">
+                <span class="exchange-label">Direct or Indirect</span>
+                <span class="view">View details →</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- House 2: Mountain/Ski -->
+          <article class="listing" data-type="Mountain/Ski"
+            onclick="viewPropertyDetails('Alpine Ski Chalet', 'Zermatt, Valais, Switzerland', '5 beds, 5 baths · Ski-in / Ski-out', 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=85')">
+            <div class="listing-img-wrap">
+              <div class="listing-img"
+                style="background-image: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=85')">
+                <button class="save" onclick="event.stopPropagation(); toggleHeart(this)">♡</button>
+              </div>
+            </div>
+            <div class="listing-body">
+              <div class="listing-top">
+                <div>
+                  <h3>Alpine Ski Chalet</h3>
+                  <div class="location">Zermatt, Valais, Switzerland</div>
+                </div>
+                <div class="rating">★ 4.98</div>
+              </div>
+              <div class="features"><span>5 bedrooms</span><span>5 baths</span><span>Matterhorn Views</span></div>
+              <div class="listing-bottom">
+                <span class="exchange-label">Mountain / Ski</span>
+                <span class="view">View details →</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- House 3: International -->
+          <article class="listing" data-type="International"
+            onclick="viewPropertyDetails('Mediterranean Villa', 'Marbella, Andalusia, Spain', '4 beds, 4 baths · Private Olive Courtyard', 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=85')">
+            <div class="listing-img-wrap">
+              <div class="listing-img"
+                style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=85')">
+                <button class="save" onclick="event.stopPropagation(); toggleHeart(this)">♡</button>
+              </div>
+            </div>
+            <div class="listing-body">
+              <div class="listing-top">
+                <div>
+                  <h3>Mediterranean Villa</h3>
+                  <div class="location">Marbella, Andalusia, Spain</div>
+                </div>
+                <div class="rating">★ 4.92</div>
+              </div>
+              <div class="features"><span>4 bedrooms</span><span>4 baths</span><span>Private Pool</span></div>
+              <div class="listing-bottom">
+                <span class="exchange-label">International</span>
+                <span class="view">View details →</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- House 4: Lake & River -->
+          <article class="listing" data-type="Lake & River"
+            onclick="viewPropertyDetails('Lake & River Timber Lodge', 'Lake Tahoe, Nevada, USA', '3 beds, 3 baths · Private Deepwater Boat Dock', 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=800&q=85')">
+            <div class="listing-img-wrap">
+              <div class="listing-img"
+                style="background-image: url('https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=800&q=85')">
+                <button class="save" onclick="event.stopPropagation(); toggleHeart(this)">♡</button>
+              </div>
+            </div>
+            <div class="listing-body">
+              <div class="listing-top">
+                <div>
+                  <h3>Lake & River Timber Lodge</h3>
+                  <div class="location">Lake Tahoe, Nevada, USA</div>
+                </div>
+                <div class="rating">★ 4.90</div>
+              </div>
+              <div class="features"><span>3 bedrooms</span><span>3 baths</span><span>Private Boat Dock</span></div>
+              <div class="listing-bottom">
+                <span class="exchange-label">Lake & River</span>
+                <span class="view">View details →</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- House 5: Desert -->
+          <article class="listing" data-type="Desert"
+            onclick="viewPropertyDetails('Desert Palm Estate', 'Scottsdale, Arizona, USA', '4 beds, 4 baths · Heated Saltwater Pool', 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=85')">
+            <div class="listing-img-wrap">
+              <div class="listing-img"
+                style="background-image: url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=85')">
+                <button class="save" onclick="event.stopPropagation(); toggleHeart(this)">♡</button>
+              </div>
+            </div>
+            <div class="listing-body">
+              <div class="listing-top">
+                <div>
+                  <h3>Desert Palm Estate</h3>
+                  <div class="location">Scottsdale, Arizona, USA</div>
+                </div>
+                <div class="rating">★ 4.94</div>
+              </div>
+              <div class="features"><span>4 bedrooms</span><span>4 baths</span><span>Heated Pool</span></div>
+              <div class="listing-bottom">
+                <span class="exchange-label">Desert</span>
+                <span class="view">View details →</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- House 6: Urban -->
+          <article class="listing" data-type="Urban"
+            onclick="viewPropertyDetails('City Garden Brownstone', 'London / Kensington, UK', '3 beds, 3 baths · Private Courtyard', 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=85')">
+            <div class="listing-img-wrap">
+              <div class="listing-img"
+                style="background-image: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=85')">
+                <button class="save" onclick="event.stopPropagation(); toggleHeart(this)">♡</button>
+              </div>
+            </div>
+            <div class="listing-body">
+              <div class="listing-top">
+                <div>
+                  <h3>City Garden Brownstone</h3>
+                  <div class="location">London, England, UK</div>
+                </div>
+                <div class="rating">★ 4.96</div>
+              </div>
+              <div class="features"><span>3 bedrooms</span><span>3 baths</span><span>Private Courtyard</span></div>
+              <div class="listing-bottom">
+                <span class="exchange-label">Urban</span>
+                <span class="view">View details →</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESTINATION MOODBOARD: EXTERIOR HOMES IN NATURE -->
+    <section style="padding-top:20px">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow"><i></i> Destination inspiration</span>
+            <h2>Where will<br>your home take you?</h2>
+          </div>
+        </div>
+        <div class="destination-grid">
+          <div class="destination-card" onclick="exploreFilter('Beach', null)"
+            style="background-image:url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=700&q=85')">
+            <div><small>Sun + Coast</small>
+              <h3>Beach Retreats</h3>
+            </div>
+          </div>
+          <div class="destination-card" onclick="exploreFilter('Mountain/Ski', null)"
+            style="background-image:url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=700&q=85')">
+            <div><small>Snow + Alpine</small>
+              <h3>Mountain & Ski</h3>
+            </div>
+          </div>
+          <div class="destination-card" onclick="exploreFilter('International', null)"
+            style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=85')">
+            <div><small>Europe + Villas</small>
+              <h3>International</h3>
+            </div>
+          </div>
+          <div class="destination-card" onclick="exploreFilter('Lake & River', null)"
+            style="background-image:url('https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=700&q=85')">
+            <div><small>Waterfront Pines</small>
+              <h3>Lakes & Rivers</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- #################### PAGE 3: HOW IT WORKS & TRANSPARENT FEES #################### -->
+  <section class="page" id="page-how" data-page-view="how">
+    <div class="page-hero">
+      <div class="container">
+        <span class="eyebrow"><i></i> Procedure of home interchange</span>
+        <h1>Arranging a swap used to feel like<br>a needle in a <em>haystack.</em></h1>
+        <p class="page-intro">
+          You not only had to find an available property in the area you wanted, but that owner had to want to visit
+          your area at the exact same moment. But no more. Our dual Direct and Indirect models remove the friction
+          entirely.
+        </p>
+      </div>
+    </div>
+
+    <!-- THE DUAL EXCHANGE MODELS -->
+    <section class="how" id="how">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow"><i></i> The exchange mechanisms</span>
+            <h2>Two flexible ways<br>to travel.</h2>
+          </div>
+          <p>Unlimited travel at affordable prices. Because every home is a second home, you are never locked into
+            simultaneous arrival dates.</p>
+        </div>
+        <div class="exchange-grid">
+
+          <article class="exchange-card">
+            <div class="number">01 / DIRECT EXCHANGE ($250 FLAT)</div>
+            <h3>Trade places.</h3>
+            <p>
+              You agree to a house swap with another member, and they have the choice of using your vacation house on
+              the same dates or <strong>any other time convenient to you both</strong>. You pay only $250.00 for the
+              entire vacation stay.
+            </p>
+            <div class="diagram">
+              <div class="node one">YOUR<br>VILLA</div>
+              <div class="arrow"></div>
+              <div class="node two">THEIR<br>CHALET</div>
+            </div>
+          </article>
+
+          <article class="exchange-card alt">
+            <div class="number">02 / INDIRECT EXCHANGE ($500/WK)</div>
+            <h3>Go first.</h3>
+            <p>
+              You stay in another member's vacation home <strong>even if they don't want to stay in yours</strong>. You
+              pay $500.00/week (prorated at $72/night). The accommodating member receives a <strong>$250.00 Exchange
+                Credit</strong> to use as payment for their next swap!
+            </p>
+            <div class="diagram">
+              <div class="node one">YOU<br>STAY</div>
+              <div class="credit">+$250 CREDIT</div>
+              <div class="node two">THEY<br>HOST</div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4-STEP PROCEDURE FROM THEVACATIONEXCHANGE.COM -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow"><i></i> 4-step procedure</span>
+            <h2>From inquiry<br>to your vacation home.</h2>
+          </div>
+        </div>
+        <div class="process-grid">
+          <article class="process-card"><span class="num">01</span>
+            <div class="icon">⌂</div>
+            <h3>List Your Property</h3>
+            <p>Submit details of your second home. Include pictures—they really are worth more than a thousand words and
+              unlock free membership.</p>
+          </article>
+          <article class="process-card"><span class="num">02</span>
+            <div class="icon">◎</div>
+            <h3>Decide Where To Go</h3>
+            <p>Choose from thousands of homes across beach resorts, snowy peaks, desert retreats, lake shores, and
+              European villas.</p>
+          </article>
+          <article class="process-card"><span class="num">03</span>
+            <div class="icon">☎</div>
+            <h3>Concierge Matching</h3>
+            <p>Our exchange coordinators search for matching properties on your behalf. Best of all, there is no extra
+              charge for this service.</p>
+          </article>
+          <article class="process-card"><span class="num">04</span>
+            <div class="icon">✦</div>
+            <h3>Finalize The Swap</h3>
+            <p>Connect directly with the host to review arrival dates, house rules, keys, and cleaning particulars
+              before departure.</p>
+          </article>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>Keys and Arrival Logistics</h3>
+            <p>Handoffs are simple: leave keys with your local property manager, in a secure lockbox with an access
+              code, with a neighbor, or send an extra set via certified mail in advance.</p>
+          </div>
+          <div class="timeline-item">
+            <h3>Cleaning Protocols</h3>
+            <p>Members agree on expectations together beforehand—including whether a local maid service fee is shared,
+              how it's paid, and what to do with linens, sheets, and towels prior to departure.</p>
+          </div>
+          <div class="timeline-item">
+            <h3>Survey Proof: Fast Matching</h3>
+            <p>Member surveys confirm that it generally takes <strong>less than three member contacts</strong> to
+              successfully arrange an exchange through our Network.</p>
+          </div>
+        </div>
+
+        <!-- AUTHENTIC FEE SCHEDULE CARD -->
+        <div class="page-cta" style="background: #f0e9db; border: 1px solid var(--line);">
+          <div>
+            <span class="eyebrow"><i></i> Official Fee Schedule</span>
+            <h2>Complete Price Transparency.</h2>
+            <p style="color: var(--muted); font-size: 14px;">
+              Annual Membership: $99.95 (Waived 1st year with 4+ photos) • Direct Exchange: $250.00 flat • Indirect:
+              $500.00/week (Host earns $250 Credit) • Photo Listing: $5 for up to 8 photos, yielding a $50 discount off
+              your first arranged exchange.
+            </p>
+          </div>
+          <button class="pill-btn dark" onclick="openModal('join')">Apply with 4+ Photos ($0) ↗</button>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- #################### PAGE 4: UNIQUE FEATURES & WHY US #################### -->
+  <section class="page" id="page-about" data-page-view="about">
+    <div class="page-hero">
+      <div class="container">
+        <span class="eyebrow"><i></i> Established 1997</span>
+        <h1>We provide unique services<br>that <em>no other company</em> offers.</h1>
+        <p class="page-intro">
+          The Vacation Exchange Network has become the gold standard in the industry for arranging exchanges between
+          vacation and second home owners.
+        </p>
+      </div>
+    </div>
+
+    <section>
+      <div class="container about-split">
+        <article class="about-panel">
+          <span class="eyebrow" style="color:#b5c9c0"><i></i> Proof of Value Charter</span>
+          <h2>We prove our value before you pay.</h2>
+          <p>
+            Unlike other clubs that demand hundreds of dollars in upfront subscription fees before you even locate a
+            house, VEN proves its value first. We receive compensation only when you arrange a vacation exchange.
+          </p>
+          <p>
+            First-year membership is completely free when you submit four or more pictures of your second home.
+          </p>
+        </article>
+        <article class="about-panel light">
+          <span class="eyebrow"><i></i> Second Homes Only</span>
+          <h2>Sole ownership.<br>Zero timeshares.</h2>
+          <p>
+            Every property listed in our Network is a dedicated second home or vacation getaway. We strictly exclude
+            primary residences and timeshares. This affords total scheduling flexibility because no owner is displaced
+            from their everyday dwelling.
+          </p>
+          <button class="pill-btn dark" onclick="openModal('join')">Join the Network ↗</button>
+        </article>
+      </div>
+
+      <div class="container" style="margin-top:30px">
+        <div class="stats-grid">
+          <div class="stat-box"><strong>1997</strong><span>Network established</span></div>
+          <div class="stat-box"><strong>40+</strong><span>Years combined coordinator service</span></div>
+          <div class="stat-box"><strong>&lt; 3</strong><span>Inquiries to arrange a match on average</span></div>
+          <div class="stat-box"><strong>$0</strong><span>Upfront payment until swap confirmed</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 UNIQUE FEATURES & FEE CARD -->
+    <section id="why">
+      <div class="container value-grid">
+        <div class="value-copy">
+          <span class="eyebrow"><i></i> 5 Unique VEN Features</span>
+          <h2>Built for second home owners.</h2>
+          <p>VEN combines dedicated vacation properties with personal human exchange coordinators to eliminate the
+            stress of finding holiday swaps.</p>
+          <div class="checks">
+            <div class="check"><b>1</b> <strong>Proof of Value:</strong> No payment unless you arrange an exchange</div>
+            <div class="check"><b>2</b> <strong>Only Vacation Homes:</strong> Eliminates displacement and calendar locks
+            </div>
+            <div class="check"><b>3</b> <strong>Direct & Indirect:</strong> Never need to match simultaneous dates</div>
+            <div class="check"><b>4</b> <strong>We Do The Work:</strong> Exchange coordinators do the search legwork
+            </div>
+            <div class="check"><b>5</b> <strong>Live Representatives:</strong> Call 561-509-0126 directly anytime</div>
+          </div>
+        </div>
+
+        <div class="fee-card">
+          <span class="eyebrow">Official Fee Schedule</span>
+          <h3>Proof of Value Pricing</h3>
+          <p>You only pay when you arrange an exchange and experience the benefits.</p>
+
+          <div class="fee-row">
+            <div><span>Annual Membership</span><small>First year waived when 4+ pictures are submitted</small></div>
+            <strong>$99.95</strong>
+          </div>
+
+          <div class="fee-row">
+            <div><span>Direct Exchange Fee</span><small>Paid per member for the entire vacation duration</small></div>
+            <strong>$250.00</strong>
+          </div>
+
+          <div class="fee-row">
+            <div><span>Indirect Exchange Fee</span><small>Per week ($72/night prorated for longer stays)</small></div>
+            <strong>$500.00</strong>
+          </div>
+
+          <div class="fee-row">
+            <div><span>Host Exchange Credit</span><small>Earned by accommodating an indirect exchange</small></div>
+            <strong>+$250.00</strong>
+          </div>
+
+          <div class="fee-row">
+            <div><span>8 Photos Promotion</span><small>One-time $5 fee yields $50 off first exchange</small></div>
+            <strong>-$50.00</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY QUOTE BANNER -->
+    <section class="story">
+      <div class="container">
+        <div class="story-card">
+          <div>
+            <span class="eyebrow" style="color:#c7ef78"><i></i> The Vacation Exchange Network</span>
+            <h2>Never pay for lodging again.</h2>
+            <p>
+              By staying at another member's home while on vacation, you can save thousands of dollars on lodging, enjoy
+              the comforts of a private home, and explore world-class destinations with absolute peace of mind.
+            </p>
+            <div class="quote">“Arranging a home exchange is the perfect solution for travel-minded second home owners.”
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCORDION FAQ FROM THEVACATIONEXCHANGE.COM -->
+    <section id="faq">
+      <div class="container faq-grid">
+        <div>
+          <span class="eyebrow"><i></i> Member help center</span>
+          <h2>Frequently<br>asked.</h2>
+          <p style="color:var(--muted);line-height:1.6;font-size:13px">
+            Everything you need to know about our sole ownership rules, exchange credits, and non-simultaneous travel.
+          </p>
+          <div style="margin-top: 25px;">
+            <a href="tel:561-509-0126" class="pill-btn dark" style="font-size: 11px;">Call 561-509-0126 ↗</a>
+          </div>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item open">
+            <button class="faq-q">How easy is it to make an exchange?<span class="plus">+</span></button>
+            <div class="faq-a">
+              <p>You'll find that arranging a house exchange with The VacationExchange Network is very easy. A survey
+                among members identified that it generally takes <strong>less than three contacts</strong> to arrange an
+                exchange, thanks to non-simultaneous dates and our Indirect credit key system.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q">Does The VacationExchange Network staff arrange the exchanges?<span
+                class="plus">+</span></button>
+            <div class="faq-a">
+              <p>Yes! Tell us where you want to go and when, and our Exchange Coordinators perform all initial search
+                legwork for you. We then put you in direct touch with interested owners to finalize dates and review
+                specific house rules.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q">Why do you limit your Network to vacation and second homes?<span
+                class="plus">+</span></button>
+            <div class="faq-a">
+              <p>Established in 1997, VEN remains the only program consisting entirely of vacation and second homes.
+                Because owners do not live in these homes day-to-day, non-simultaneous travel is seamless and guests can
+                stay even if the host travels elsewhere.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q">Must exchanges take place during the same week(s)?<span class="plus">+</span></button>
+            <div class="faq-a">
+              <p>No! Direct swaps do not need to be simultaneous. You may take your ski trip to Colorado in February and
+                allow your home in Maui or Hilton Head to be enjoyed by your exchange partner in July.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q">For how many weeks may I exchange?<span class="plus">+</span></button>
+            <div class="faq-a">
+              <p>The duration is strictly between you and your exchange partner. Most swaps are for one week, but many
+                members arrange long weekends or multi-week stays.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q">Do you accept timeshares?<span class="plus">+</span></button>
+            <div class="faq-a">
+              <p>No. We strictly exclude timeshares. Only single-family residences, detached villas, townhomes, and
+                luxury condominiums held under sole ownership are eligible.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand"><span class="brand-mark"></span><span>The Vacation Exchange</span></div>
+          <h2>Go somewhere<br>you've dreamed about.</h2>
+          <p>
+            The VacationExchange Network — Est. 1997. Exclusively for vacation and second homes. Proof of Value
+            guarantee with $0 upfront fee until an exchange is finalized.
+          </p>
+          <button class="pill-btn" style="background:var(--lime);color:var(--ink);margin-top:14px"
+            onclick="openModal('join')">List your second home ↗</button>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <strong>Explore</strong>
+            <a href="#explore" onclick="showPage('explore')">Vacation Homes</a>
+            <a href="#explore" onclick="filterCategory('Beach')">Beachfront</a>
+            <a href="#explore" onclick="filterCategory('Mountain/Ski')">Mountain & Ski</a>
+            <a href="#explore" onclick="filterCategory('International')">International</a>
+          </div>
+          <div class="footer-col">
+            <strong>The Network</strong>
+            <a href="#how-it-works" onclick="showPage('how')">How Swaps Work</a>
+            <a href="#how-it-works" onclick="showPage('how')">Fee Schedule</a>
+            <a href="#about" onclick="showPage('about')">5 Unique Features</a>
+            <a href="#about" onclick="showPage('about')">FAQs</a>
+          </div>
+          <div class="footer-col">
+            <strong>Coordinators</strong>
+            <a href="tel:561-509-0126">561-509-0126</a>
+            <a href="#" onclick="openModal('login'); return false">Member Login</a>
+            <a href="#"
+              onclick="showToast('Member Privacy: Contact info is never revealed before mutual agreement.')">Privacy
+              Covenant</a>
+            <a href="#" onclick="showToast('Sole Deed Covenant: Only whole-ownership second homes accepted.')">Deed
+              Standards</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 1997–2026 The Vacation Exchange Network, Inc. All rights reserved.</span>
+        <span>Vacation homes · House swaps · Direct & Indirect exchanges</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= APPLICATION & LOGIN MODAL ================= -->
+  <div class="modal" id="modal">
+    <div class="modal-box">
+      <button class="close" onclick="closeModal()">×</button>
+      <span class="eyebrow" id="modalEyebrow"><i></i> Join The Network</span>
+      <h2 id="modalTitle">List your vacation home.</h2>
+      <p id="modalText">Proof of Value Guarantee: No payment unless you arrange an exchange. First year fee waived with
+        4+ photos.</p>
+
+      <form class="form-grid" onsubmit="submitModal(event)">
+        <input class="form-input" placeholder="First name *" required>
+        <input class="form-input" placeholder="Last name *" required>
+        <input class="form-input full" type="email" placeholder="Email address *" required>
+        <input class="form-input full" type="tel" placeholder="Phone number (e.g. 561-509-0126) *" required>
+        <input class="form-input" placeholder="Property Location (City, State/Country) *" required>
+        <select class="form-input" required>
+          <option value="">Property Category...</option>
+          <option>Beach</option>
+          <option>Mountain / Ski</option>
+          <option>International</option>
+          <option>Lake & River</option>
+          <option>Desert</option>
+          <option>Urban</option>
+        </select>
+        <input class="form-input" type="number" min="1" max="15" value="3" placeholder="Bedrooms" required>
+        <input class="form-input" type="number" min="1" max="15" value="3" placeholder="Bathrooms" required>
+        <textarea class="form-input full" rows="3"
+          placeholder="Brief description of amenities, view, and sleeping accommodations..."></textarea>
+
+        <div class="full"
+          style="background:#f0eee7; padding:12px; border-radius:14px; font-size:11px; color:var(--muted); line-height: 1.4;">
+          <strong>Photo Waiver Notice:</strong> Submit 4 or more property photos to waive the first-year $99.95
+          membership fee completely. Sole-ownership vacation homes only (no timeshares).
+        </div>
+
+        <button class="modal-submit full">Submit Application ($0 Due Now) →</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Notification message</div>
+
+  <!-- ================= JAVASCRIPT CONTROLLERS ================= -->
+  <script>
+    // Smooth FAQ accordions
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        document.querySelectorAll('.faq-item').forEach(x => { if (x !== item) x.classList.remove('open') });
+        item.classList.toggle('open');
+      });
+    });
+
+    // Modal Control
+    function openModal(type) {
+      const modal = document.getElementById('modal');
+      const eyebrow = document.getElementById('modalEyebrow');
+      const title = document.getElementById('modalTitle');
+      const text = document.getElementById('modalText');
+      if (type === 'login') {
+        eyebrow.innerHTML = '<i></i> Member Access';
+        title.textContent = 'Welcome back.';
+        text.textContent = 'Sign in to access your direct exchange inbox, banked credits, and coordinator assistance.';
+      } else {
+        eyebrow.innerHTML = '<i></i> Join The Network';
+        title.textContent = 'List your vacation home.';
+        text.textContent = 'Proof of Value Guarantee: No payment unless you arrange an exchange. First year fee waived with 4+ photos.';
+      }
+      modal.classList.add('open');
+    }
+
+    function closeModal() { document.getElementById('modal').classList.remove('open') }
+    document.getElementById('modal').addEventListener('click', e => {
+      if (e.target.id === 'modal') closeModal();
+    });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal() });
+
+    function submitModal(e) {
+      e.preventDefault();
+      closeModal();
+      showToast('Application received! A coordinator will review your sole-deed listing shortly.');
+      e.target.reset();
+    }
+
+    function toggleHeart(btn) {
+      btn.textContent = btn.textContent === '♡' ? '♥' : '♡';
+      btn.style.color = btn.textContent === '♥' ? 'var(--coral)' : '';
+    }
+
+    // Client-side Routing
+    function showPage(page) {
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(p => p.classList.toggle('active', p.dataset.pageView === page));
+      document.querySelectorAll('[data-page]').forEach(a => a.classList.toggle('current', a.dataset.page === page));
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      history.replaceState(null, '', '#' + (page === 'home' ? 'home' : page === 'how' ? 'how-it-works' : page));
+    }
+
+    document.querySelectorAll('[data-page]').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        showPage(link.dataset.page);
+      });
+    });
+
+    function routeFromHash() {
+      const h = location.hash.replace('#', '');
+      if (h === 'explore') showPage('explore');
+      else if (h === 'how-it-works') showPage('how');
+      else if (h === 'about') showPage('about');
+      else showPage('home');
+    }
+    window.addEventListener('hashchange', routeFromHash);
+
+    // Search & Filter Features
+    function searchHomes() {
+      const value = document.getElementById('destination').value.trim();
+      const cat = document.getElementById('homeCategorySelect').value;
+      showPage('explore');
+      setTimeout(() => {
+        const input = document.getElementById('exploreSearch');
+        if (input) input.value = value;
+        if (cat !== 'all') {
+          exploreFilter(cat, null);
+        } else {
+          runExploreSearch();
+        }
+      }, 50);
+      showToast(value ? `Searching network for “${value}”` : 'Showing verified vacation homes');
+    }
+
+    function filterCategory(type) {
+      showPage('explore');
+      setTimeout(() => {
+        exploreFilter(type, null);
+      }, 50);
+    }
+
+    function exploreFilter(type, button) {
+      document.querySelectorAll('.filter-chip').forEach(b => b.classList.remove('active'));
+      if (button) {
+        button.classList.add('active');
+      } else {
+        const matchingBtn = Array.from(document.querySelectorAll('.filter-chip')).find(b => b.innerText.toLowerCase().includes(type.toLowerCase()));
+        if (matchingBtn) matchingBtn.classList.add('active');
+      }
+
+      document.querySelectorAll('#page-explore .listing').forEach(card => {
+        card.style.display = (type === 'all' || card.dataset.type === type) ? 'block' : 'none';
+      });
+      showToast(type === 'all' ? 'Showing all categories' : `${type} properties selected`);
+    }
+
+    function runExploreSearch() {
+      const value = (document.getElementById('exploreSearch')?.value || '').trim().toLowerCase();
+      document.querySelectorAll('#page-explore .listing').forEach(card => {
+        const text = card.innerText.toLowerCase();
+        card.style.display = (!value || text.includes(value)) ? 'block' : 'none';
+      });
+      showToast(value ? `Searching for “${value}”` : 'Showing all vacation homes');
+    }
+
+    function viewPropertyDetails(title, loc, feats, img) {
+      showToast(`Selected: ${title} (${loc}) — Contact coordinator at 561-509-0126 to arrange introduction.`);
+    }
+
+    function showToast(message) {
+      const t = document.getElementById('toast');
+      t.textContent = message;
+      t.classList.add('show');
+      clearTimeout(window.toastTimer);
+      window.toastTimer = setTimeout(() => t.classList.remove('show'), 3200);
+    }
+
+    routeFromHash();
+  </script>
+</body>
+
+</html>

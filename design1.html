@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Vacation Exchange - Where Owners Exchange Second Homes | Est. 1997</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Inter & Plus Jakarta Sans Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#FF385C',
+                            dark: '#222222',
+                            gray: '#717171',
+                            lightGray: '#F7F7F7',
+                            border: '#EBEBEB',
+                            terracotta: '#D64C38',
+                            warmGold: '#C5A059'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: #222222;
+            background-color: #FFFFFF;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .card-zoom:hover .card-img {
+            transform: scale(1.04);
+        }
+
+        .card-img {
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col bg-white text-brand-dark selection:bg-rose-100 selection:text-brand-red">
+
+    <!-- ================= TOP CONCIERGE MARQUEE STRIP (STRICTLY ONE LINE) ================= -->
+    <div class="bg-[#F8F9FA] border-b border-brand-border py-2 px-4 text-[12px] text-brand-gray overflow-hidden">
+        <div
+            class="max-w-7xl mx-auto w-full flex items-center justify-between gap-6 whitespace-nowrap overflow-x-auto hide-scrollbar">
+
+            <div class="flex items-center gap-2 flex-shrink-0">
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 flex-shrink-0"></span>
+                <span><strong class="text-brand-dark font-semibold">The Vacation Exchange Network (VEN)</strong> — Est.
+                    1997 • Vacation & Second Homes Only</span>
+            </div>
+
+            <div class="flex items-center gap-6 flex-shrink-0">
+                <span class="flex items-center gap-1.5">
+                    <i class="fa-solid fa-phone text-brand-red"></i>
+                    Coordinators: <strong class="text-brand-dark font-semibold">561-509-0126</strong> <span
+                        class="text-gray-400 font-normal">(40+ Years Service)</span>
+                </span>
+                <span class="text-gray-300">|</span>
+                <span class="flex items-center gap-1.5 text-emerald-700 font-medium">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Proof of Value: No payment unless you arrange an exchange</span>
+                </span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ================= MAIN AIRBNB STYLE STICKY NAVBAR ================= -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20 gap-3">
+
+                <!-- Logo: Terracotta Roof + Chimney + Sun + Waves -->
+                <a href="javascript:void(0)" onclick="navigateTo('explore')"
+                    class="flex items-center gap-3 group focus:outline-none flex-shrink-0">
+                    <div class="w-11 h-11 flex-shrink-0 flex items-center justify-center text-brand-terracotta">
+                        <svg viewBox="0 0 100 100" class="w-full h-full fill-none stroke-current" stroke-width="4.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <!-- Golden Sun -->
+                            <path d="M 40 38 A 12 12 0 0 1 60 38" fill="#FDB813" stroke="#FDB813" stroke-width="2" />
+                            <line x1="50" y1="20" x2="50" y2="15" stroke="#FDB813" stroke-width="3.5" />
+                            <line x1="34" y1="26" x2="30" y2="22" stroke="#FDB813" stroke-width="3.5" />
+                            <line x1="66" y1="26" x2="70" y2="22" stroke="#FDB813" stroke-width="3.5" />
+
+                            <!-- House Gable with Chimney -->
+                            <polyline points="20,48 50,22 80,48" stroke="#D64C38" stroke-width="5" />
+                            <polyline points="64,30 64,21 72,21 72,36" stroke="#D64C38" stroke-width="4" />
+
+                            <!-- House Body Outline (V & E styling) -->
+                            <polyline points="28,47 28,70 50,70" stroke="#D64C38" stroke-width="4" />
+                            <polyline points="72,47 72,70 50,70" stroke="#D64C38" stroke-width="4" />
+                            <path d="M 40,46 L 50,65 L 60,46" stroke="#D64C38" stroke-width="3.5" />
+
+                            <!-- Ocean Waves -->
+                            <path d="M 18,78 C 30,73 40,83 50,78 C 60,73 70,83 82,78" stroke="#D64C38"
+                                stroke-width="3.8" />
+                            <path d="M 22,86 C 32,82 42,90 50,86 C 58,82 68,90 78,86" stroke="#D64C38"
+                                stroke-width="3.2" />
+                        </svg>
+                    </div>
+                    <div class="hidden sm:block">
+                        <span class="text-lg font-extrabold tracking-tight text-brand-dark block leading-none">The
+                            Vacation Exchange</span>
+                        <span class="text-[11px] text-brand-gray font-medium mt-1 block">Where Owners Exchange Second
+                            Homes</span>
+                    </div>
+                </a>
+
+                <!-- Segmented Search Pill Widget -->
+                <div
+                    class="hidden md:flex items-center border border-brand-border rounded-full shadow-sm hover:shadow-md transition-shadow duration-200 px-2 py-1.5 bg-white text-xs whitespace-nowrap">
+
+                    <!-- Any Destination (Triggers Explore View) -->
+                    <button onclick="focusSearch()"
+                        class="px-3.5 py-2 font-semibold text-brand-dark hover:bg-gray-100 rounded-full transition">
+                        Any Destination
+                    </button>
+
+                    <span class="h-4 w-[1px] bg-gray-200"></span>
+
+                    <!-- Exchange Type -->
+                    <button onclick="navigateTo('how-it-works')"
+                        class="px-3.5 py-2 font-semibold text-brand-dark hover:bg-gray-100 rounded-full transition flex items-center gap-1.5">
+                        <span>Exchange Type</span>
+                        <i class="fa-solid fa-chevron-down text-[9px] text-gray-400"></i>
+                    </button>
+
+                    <span class="h-4 w-[1px] bg-gray-200"></span>
+
+                    <!-- Unique Features (Replaced Flexible Dates) -->
+                    <button onclick="navigateTo('unique-features')"
+                        class="px-3.5 py-2 font-semibold text-brand-dark hover:bg-gray-100 rounded-full transition">
+                        Unique Features
+                    </button>
+
+                    <span class="h-4 w-[1px] bg-gray-200"></span>
+
+                    <!-- List Your Vacation Home (Replaced Vacation Homes & external button) -->
+                    <button onclick="openApplyModal()"
+                        class="px-3.5 py-2 font-semibold text-brand-dark hover:bg-gray-100 rounded-full transition text-brand-red">
+                        List Your Vacation Home
+                    </button>
+
+                    <button onclick="applySearchFilter()"
+                        class="w-8 h-8 rounded-full bg-brand-red text-white flex items-center justify-center hover:bg-rose-600 transition shadow-sm ml-1 flex-shrink-0">
+                        <i class="fa-solid fa-magnifying-glass text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Right Side Nav: Streamlined Navigation -->
+                <div class="flex items-center gap-2 lg:gap-3 flex-shrink-0">
+
+                    <nav class="hidden lg:flex items-center space-x-1 text-xs font-semibold whitespace-nowrap">
+                        <!-- Explore Homes removed as requested -->
+                        <button onclick="navigateTo('how-it-works')" id="nav-btn-how-it-works"
+                            class="px-3 py-2 rounded-full hover:bg-gray-100 transition text-brand-dark">
+                            How It Works & Fees
+                        </button>
+                        <button onclick="navigateTo('faq-contact')" id="nav-btn-faq-contact"
+                            class="px-3 py-2 rounded-full hover:bg-gray-100 transition text-brand-dark">
+                            FAQ & Join
+                        </button>
+                    </nav>
+
+                    <!-- Globe Language / Currency -->
+                    <button onclick="showToast('Serving second home owners across USA, Canada, Europe, & Caribbean.')"
+                        class="w-8 h-8 rounded-full hover:bg-gray-100 flex items-center justify-center text-brand-dark transition text-xs"
+                        title="Language & Currency">
+                        <i class="fa-solid fa-globe"></i>
+                    </button>
+
+                    <!-- Profile / User Menu Button -->
+                    <div class="relative">
+                        <button onclick="toggleUserDropdown()"
+                            class="flex items-center gap-2 border border-brand-border rounded-full py-1.5 px-3 hover:shadow-md transition text-brand-dark bg-white relative">
+                            <i class="fa-solid fa-bars text-xs text-brand-gray"></i>
+                            <div
+                                class="w-6 h-6 rounded-full bg-brand-dark text-white flex items-center justify-center text-[10px]">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <span
+                                class="absolute -top-1 -right-1 bg-brand-red text-white text-[9px] w-4 h-4 rounded-full flex items-center justify-center font-bold">1</span>
+                        </button>
+
+                        <!-- Dropdown Menu -->
+                        <div id="userDropdown"
+                            class="hidden absolute right-0 mt-2 w-64 bg-white rounded-2xl shadow-2xl border border-brand-border py-2 z-50 text-xs">
+                            <div class="px-4 py-3 border-b border-gray-100">
+                                <p class="font-bold text-brand-dark">Welcome to VEN</p>
+                                <p class="text-brand-gray text-[11px] mt-0.5">Est. 1997 • Vacation & Second Homes Only
+                                </p>
+                            </div>
+                            <a href="javascript:void(0)" onclick="openApplyModal(); toggleUserDropdown()"
+                                class="block px-4 py-2.5 hover:bg-gray-50 font-semibold text-brand-red">List Your
+                                Vacation Home ($0 Fee)</a>
+                            <a href="javascript:void(0)" onclick="navigateTo('how-it-works'); toggleUserDropdown()"
+                                class="block px-4 py-2 hover:bg-gray-50 text-brand-dark">Direct & Indirect Fee
+                                Schedules</a>
+                            <a href="javascript:void(0)" onclick="navigateTo('unique-features'); toggleUserDropdown()"
+                                class="block px-4 py-2 hover:bg-gray-50 text-brand-dark">Unique Features & Guarantee</a>
+                            <a href="javascript:void(0)" onclick="navigateTo('faq-contact'); toggleUserDropdown()"
+                                class="block px-4 py-2 hover:bg-gray-50 text-brand-dark">Frequently Asked Questions</a>
+                            <div class="border-t border-gray-100 my-1"></div>
+                            <a href="tel:561-509-0126" class="block px-4 py-2 hover:bg-gray-50 text-brand-dark"><i
+                                    class="fa-solid fa-phone mr-2 text-brand-gray"></i>Call Coordinator
+                                (561-509-0126)</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= SUB-HEADER: AUTHENTIC 6 CATEGORIES FILTER BAR ================= -->
+    <div id="categoryHeader" class="sticky top-20 z-30 bg-white/95 backdrop-blur-md border-b border-brand-border py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
+
+            <!-- Horizontal Scrollable Authentic Categories -->
+            <div class="flex items-center space-x-6 sm:space-x-10 overflow-x-auto hide-scrollbar py-1">
+
+                <button onclick="filterCategory('Beach')"
+                    class="cat-pill active flex flex-col items-center gap-1.5 pb-2 border-b-2 border-brand-dark text-brand-dark font-semibold text-xs transition flex-shrink-0 group">
+                    <i class="fa-solid fa-umbrella-beach text-lg text-brand-gray group-hover:text-brand-dark"></i>
+                    <span>Beach</span>
+                </button>
+
+                <button onclick="filterCategory('Mountain/Ski')"
+                    class="cat-pill flex flex-col items-center gap-1.5 pb-2 border-b-2 border-transparent text-brand-gray hover:text-brand-dark font-medium text-xs transition flex-shrink-0 group">
+                    <i class="fa-solid fa-mountain-sun text-lg text-brand-gray group-hover:text-brand-dark"></i>
+                    <span>Mountain / Ski</span>
+                </button>
+
+                <button onclick="filterCategory('International')"
+                    class="cat-pill flex flex-col items-center gap-1.5 pb-2 border-b-2 border-transparent text-brand-gray hover:text-brand-dark font-medium text-xs transition flex-shrink-0 group">
+                    <i class="fa-solid fa-earth-americas text-lg text-brand-gray group-hover:text-brand-dark"></i>
+                    <span>International</span>
+                </button>
+
+                <button onclick="filterCategory('Lake & River')"
+                    class="cat-pill flex flex-col items-center gap-1.5 pb-2 border-b-2 border-transparent text-brand-gray hover:text-brand-dark font-medium text-xs transition flex-shrink-0 group">
+                    <i class="fa-solid fa-water text-lg text-brand-gray group-hover:text-brand-dark"></i>
+                    <span>Lake & River</span>
+                </button>
+
+                <button onclick="filterCategory('Desert')"
+                    class="cat-pill flex flex-col items-center gap-1.5 pb-2 border-b-2 border-transparent text-brand-gray hover:text-brand-dark font-medium text-xs transition flex-shrink-0 group">
+                    <i class="fa-solid fa-sun-plant-wilt text-lg text-brand-gray group-hover:text-brand-dark"></i>
+                    <span>Desert</span>
+                </button>
+
+                <button onclick="filterCategory('Urban')"
+                    class="cat-pill flex flex-col items-center gap-1.5 pb-2 border-b-2 border-transparent text-brand-gray hover:text-brand-dark font-medium text-xs transition flex-shrink-0 group">
+                    <i class="fa-solid fa-city text-lg text-brand-gray group-hover:text-brand-dark"></i>
+                    <span>Urban</span>
+                </button>
+
+            </div>
+
+            <!-- Quick Live Filter -->
+            <div class="flex items-center gap-3 flex-shrink-0">
+                <div class="relative hidden sm:block">
+                    <input type="text" id="liveSearchInput" oninput="applySearchFilter()"
+                        placeholder="Search state, resort, country..."
+                        class="pl-8 pr-3 py-1.5 text-xs rounded-full border border-brand-border focus:outline-none focus:border-brand-dark w-44 lg:w-56">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-gray-400 text-[10px]"></i>
+                </div>
+                <button onclick="openApplyModal()"
+                    class="border border-brand-border hover:border-brand-dark rounded-xl px-3 py-1.5 text-xs font-semibold flex items-center gap-2 transition text-brand-dark">
+                    <i class="fa-solid fa-sliders text-xs"></i>
+                    <span class="hidden md:inline">Proof of Value</span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ================= MAIN CONTENT SPA CONTAINER ================= -->
+    <main class="flex-grow">
+
+        <!-- #################### PAGE 1: EXPLORE HOMES (AIRBNB STYLE CARDS) #################### -->
+        <section id="page-explore" class="spa-page max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+            <!-- Headline & VEN Value Banner -->
+            <div
+                class="mb-6 flex flex-col md:flex-row md:items-end justify-between border-b border-gray-100 pb-5 gap-4">
+                <div>
+                    <div class="flex items-center gap-2 mb-1">
+                        <span
+                            class="bg-rose-50 text-brand-red text-[11px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider">Vacation
+                            Homes Only</span>
+                        <span class="text-xs text-brand-gray">• Proof of Value: No payment until swap arranged</span>
+                    </div>
+                    <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-brand-dark">Search Thousands of
+                        Beautiful Vacation Homes</h1>
+                    <p class="text-xs sm:text-sm text-brand-gray mt-1 max-w-3xl">
+                        Where and when you want, without having to find someone to use your home. Exclusively for
+                        dedicated second homes and holiday villas.
+                    </p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span class="text-xs text-brand-gray font-medium" id="propertyCountLabel">Showing 8 verified second
+                        homes</span>
+                    <button onclick="openSavingsModal()"
+                        class="text-xs font-bold text-brand-red bg-rose-50 hover:bg-rose-100 px-3.5 py-2 rounded-xl transition">
+                        <i class="fa-solid fa-calculator mr-1"></i> Calculate Savings
+                    </button>
+                </div>
+            </div>
+
+            <!-- PROPERTY GRID: Strictly exterior architecture photos of vacation houses -->
+            <div id="propertyGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Rendered reactively via JS -->
+            </div>
+
+            <!-- Guarantee Banner from thevacationexchange.com -->
+            <div
+                class="mt-16 bg-[#FDFBF7] border border-[#E9E2D5] rounded-3xl p-8 sm:p-10 text-center relative overflow-hidden">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <span
+                        class="text-xs font-bold text-brand-terracotta tracking-widest uppercase mb-2 inline-block">The
+                        VEN Guarantee</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-brand-dark">We Prove Our Value Before You Pay</h2>
+                    <p class="text-sm text-brand-gray mt-3 leading-relaxed">
+                        The VacationExchange Network has become the gold standard in the industry for arranging
+                        exchanges between vacation home owners. You pay the exchange fee only after you arrange an
+                        exchange and experience the benefits. First-year membership is completely free when you submit
+                        four or more pictures.
+                    </p>
+                    <div class="mt-6 flex flex-wrap items-center justify-center gap-4 text-xs font-semibold">
+                        <button onclick="openApplyModal()"
+                            class="bg-brand-red hover:bg-rose-600 text-white px-6 py-3 rounded-xl transition shadow-md">
+                            Start Traveling Lodging Free — Join Now
+                        </button>
+                        <a href="tel:561-509-0126"
+                            class="border border-brand-border bg-white hover:bg-gray-50 text-brand-dark px-5 py-3 rounded-xl transition flex items-center gap-2">
+                            <i class="fa-solid fa-phone text-brand-terracotta"></i> 561-509-0126 (Talk to a Coordinator)
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- #################### PAGE 2: UNIQUE FEATURES & WHY US #################### -->
+        <section id="page-unique-features" class="spa-page hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+            <div class="max-w-3xl mb-12">
+                <span class="text-xs font-bold text-brand-red uppercase tracking-wider">Why We Are Different</span>
+                <h1 class="text-3xl sm:text-4xl font-extrabold text-brand-dark mt-1">We Provide Unique Home Swap
+                    Services That No Other Company Offers</h1>
+                <p class="text-brand-gray text-sm mt-3 leading-relaxed">
+                    Established in 1997, The VacationExchange Network (VEN) solves the traditional house swap dilemma.
+                    You never have to find someone who wants to visit your town during the exact same week you want to
+                    take your holiday.
+                </p>
+            </div>
+
+            <!-- The 5 Unique Features Grid (Verbatim from www.thevacationexchange.com) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+
+                <div class="border border-brand-border rounded-2xl p-6 bg-white hover:shadow-md transition">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-rose-50 text-brand-red flex items-center justify-center text-xl mb-4 font-bold">
+                        1</div>
+                    <h3 class="text-base font-bold text-brand-dark">Proof of Value — No Payment Unless You Arrange an
+                        Exchange</h3>
+                    <p class="text-xs text-brand-gray mt-2.5 leading-relaxed">
+                        Unlike other clubs that demand hundreds of dollars in upfront subscription fees before you even
+                        locate a house, VEN proves its value first. We receive compensation only when you arrange a
+                        vacation exchange.
+                    </p>
+                    <div
+                        class="mt-4 pt-3 border-t border-gray-100 text-[11px] font-semibold text-emerald-700 flex items-center gap-1.5">
+                        <i class="fa-solid fa-check-circle"></i> 100% Risk Free Membership
+                    </div>
+                </div>
+
+                <div class="border border-brand-border rounded-2xl p-6 bg-white hover:shadow-md transition">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center text-xl mb-4 font-bold">
+                        2</div>
+                    <h3 class="text-base font-bold text-brand-dark">Only Vacation Homes — Makes Finding an Exchange Much
+                        Easier</h3>
+                    <p class="text-xs text-brand-gray mt-2.5 leading-relaxed">
+                        Every property listed in our Network is a dedicated second home or vacation getaway. We strictly
+                        exclude primary residences and timeshares. This affords total scheduling flexibility because no
+                        owner is displaced from their everyday dwelling.
+                    </p>
+                    <div
+                        class="mt-4 pt-3 border-t border-gray-100 text-[11px] font-semibold text-brand-dark flex items-center gap-1.5">
+                        <i class="fa-solid fa-house-chimney"></i> Sole Ownership Second Homes Only
+                    </div>
+                </div>
+
+                <div class="border border-brand-border rounded-2xl p-6 bg-white hover:shadow-md transition">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center text-xl mb-4 font-bold">
+                        3</div>
+                    <h3 class="text-base font-bold text-brand-dark">Direct & Indirect Exchanges — Simplifies Finding
+                        Exchange Homes</h3>
+                    <p class="text-xs text-brand-gray mt-2.5 leading-relaxed">
+                        Direct Exchanges allow two owners to swap even on non-simultaneous calendar dates. Indirect
+                        Exchanges allow you to stay in another member's home even if they don't want to stay in
+                        yours—they simply bank an Exchange Credit ($250.00 value) for their next trip.
+                    </p>
+                    <div
+                        class="mt-4 pt-3 border-t border-gray-100 text-[11px] font-semibold text-blue-700 flex items-center gap-1.5">
+                        <i class="fa-solid fa-repeat"></i> Never Locked to Simultaneous Dates
+                    </div>
+                </div>
+
+                <div class="border border-brand-border rounded-2xl p-6 bg-white hover:shadow-md transition">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-purple-50 text-purple-700 flex items-center justify-center text-xl mb-4 font-bold">
+                        4</div>
+                    <h3 class="text-base font-bold text-brand-dark">We Do the Work — You Enjoy the House Swap</h3>
+                    <p class="text-xs text-brand-gray mt-2.5 leading-relaxed">
+                        Finding a home swap on your own can feel like looking for a needle in a haystack. Our staff of
+                        exchange coordinators does the initial search legwork for you, screening matching destinations
+                        and introducing vetted partners.
+                    </p>
+                    <div
+                        class="mt-4 pt-3 border-t border-gray-100 text-[11px] font-semibold text-purple-700 flex items-center gap-1.5">
+                        <i class="fa-solid fa-handshake-angle"></i> Full Concierge Matchmaking Included
+                    </div>
+                </div>
+
+                <div class="border border-brand-border rounded-2xl p-6 bg-white hover:shadow-md transition">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-xl mb-4 font-bold">
+                        5</div>
+                    <h3 class="text-base font-bold text-brand-dark">Live Coordinator Telephone Support</h3>
+                    <p class="text-xs text-brand-gray mt-2.5 leading-relaxed">
+                        You are never left behind an automated email inbox. Our exchange team brings over 40 years of
+                        combined service in helping members coordinate dream holidays. Direct phone access is available
+                        at 561-509-0126.
+                    </p>
+                    <div
+                        class="mt-4 pt-3 border-t border-gray-100 text-[11px] font-semibold text-brand-dark flex items-center gap-1.5">
+                        <i class="fa-solid fa-phone"></i> Direct Telephone: 561-509-0126
+                    </div>
+                </div>
+
+                <div class="border border-brand-border rounded-2xl p-6 bg-gray-50 flex flex-col justify-between">
+                    <div>
+                        <div
+                            class="w-12 h-12 rounded-xl bg-gray-200 text-brand-dark flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-brand-dark">Member Privacy & Honest Network</h3>
+                        <p class="text-xs text-brand-gray mt-2.5 leading-relaxed">
+                            Your personal contact info, street addresses, and phone numbers remain private. Only after
+                            both parties confirm mutual interest are direct introductions facilitated to discuss house
+                            guidelines and key handoffs.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-gray-200 text-[11px] font-semibold text-brand-gray">
+                        Network survey shows average match in &lt; 3 contacts.
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- #################### PAGE 3: HOW IT WORKS & OFFICIAL FEES #################### -->
+        <section id="page-how-it-works" class="spa-page hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+            <div class="max-w-3xl mb-10">
+                <span class="text-xs font-bold text-brand-red uppercase tracking-wider">Procedure of Home
+                    Interchange</span>
+                <h1 class="text-3xl sm:text-4xl font-extrabold text-brand-dark mt-1">How Home Swaps Work & Transparent
+                    Fees</h1>
+                <p class="text-brand-gray text-sm mt-3 leading-relaxed">
+                    Arranging a home swap used to be difficult, if not impossible. You not only had to find an available
+                    property in the area you wanted, but that property owner had to want to visit your area as well.
+                    Finding a needle in a haystack might be easier. But no more.
+                </p>
+            </div>
+
+            <!-- 4-Step Interchange Procedure -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
+
+                <div class="bg-gray-50 p-6 rounded-2xl border border-brand-border">
+                    <div
+                        class="w-10 h-10 rounded-full bg-brand-dark text-white flex items-center justify-center font-bold text-sm mb-3">
+                        1</div>
+                    <h3 class="font-bold text-sm text-brand-dark">List Your Property</h3>
+                    <p class="text-xs text-brand-gray mt-2 leading-relaxed">
+                        List your vacation home and include the description that makes it the place other members want
+                        to visit. Remember to include pictures—they really are better than a thousand words.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-2xl border border-brand-border">
+                    <div
+                        class="w-10 h-10 rounded-full bg-brand-dark text-white flex items-center justify-center font-bold text-sm mb-3">
+                        2</div>
+                    <h3 class="font-bold text-sm text-brand-dark">Decide Where To Go</h3>
+                    <p class="text-xs text-brand-gray mt-2 leading-relaxed">
+                        This could be your toughest decision! We have properties in every major resort—beachfront,
+                        mountain ski chalets, desert retreats, and European villas. Have fun choosing where you want to
+                        go.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-2xl border border-brand-border">
+                    <div
+                        class="w-10 h-10 rounded-full bg-brand-dark text-white flex items-center justify-center font-bold text-sm mb-3">
+                        3</div>
+                    <h3 class="font-bold text-sm text-brand-dark">Contact Our Concierge</h3>
+                    <p class="text-xs text-brand-gray mt-2 leading-relaxed">
+                        Our concierge staff's primary function is to help find you an exchange. They do a great job and
+                        best of all there is no additional charge for this coordinator service.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-2xl border border-brand-red text-brand-dark">
+                    <div
+                        class="w-10 h-10 rounded-full bg-brand-red text-white flex items-center justify-center font-bold text-sm mb-3">
+                        4</div>
+                    <h3 class="font-bold text-sm text-brand-dark">Finalize The Exchange</h3>
+                    <p class="text-xs text-brand-gray mt-2 leading-relaxed">
+                        Once we find the property of your dreams, we put you in direct touch with the owner. Both of you
+                        agree on particulars, house guidelines, arrival dates, and key arrangements.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- AUTHENTIC VEN FEE STRUCTURE -->
+            <div class="mb-14">
+                <div class="border-b border-gray-200 pb-3 mb-6">
+                    <h2 class="text-xl font-bold text-brand-dark">Official Fee Schedule & Credit Values</h2>
+                    <p class="text-xs text-brand-gray">Membership in The Vacation Exchange Network is risk free. You
+                        only pay when you arrange a home exchange.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                    <div
+                        class="border-2 border-brand-border hover:border-brand-dark rounded-3xl p-6 bg-white transition flex flex-col justify-between">
+                        <div>
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-brand-gray">Reciprocal
+                                Swap</span>
+                            <h3 class="text-xl font-bold text-brand-dark mt-1">Direct Exchange Fee</h3>
+                            <div class="mt-4 flex items-baseline gap-1">
+                                <span class="text-3xl font-extrabold text-brand-dark">$250.00</span>
+                                <span class="text-xs text-brand-gray font-medium">/ entire vacation</span>
+                            </div>
+                            <p class="text-xs text-brand-gray mt-3 leading-relaxed">
+                                Paid by each member when a home exchange is arranged. The stay can be for a weekend, one
+                                week, or two weeks as agreed upon between you and your partner. Dates need not be
+                                simultaneous.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-gray-100 text-[11px] text-brand-gray">
+                            <i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Covers lodging for the complete
+                            duration
+                        </div>
+                    </div>
+
+                    <div
+                        class="border-2 border-brand-red rounded-3xl p-6 bg-rose-50/30 transition flex flex-col justify-between relative shadow-sm">
+                        <span
+                            class="absolute -top-3 right-6 bg-brand-red text-white text-[10px] font-bold uppercase px-3 py-1 rounded-full tracking-wider">Most
+                            Flexible</span>
+                        <div>
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-brand-red">One-Way
+                                Non-Reciprocal</span>
+                            <h3 class="text-xl font-bold text-brand-dark mt-1">Indirect Exchange Fee</h3>
+                            <div class="mt-4 flex items-baseline gap-1">
+                                <span class="text-3xl font-extrabold text-brand-dark">$500.00</span>
+                                <span class="text-xs text-brand-gray font-medium">/ week</span>
+                            </div>
+                            <p class="text-xs text-brand-gray mt-3 leading-relaxed">
+                                Paid by the member using the vacation home when the host does not wish to swap into the
+                                guest's home. Prorated at <strong>$72/night</strong> for longer stays.
+                            </p>
+                            <div
+                                class="mt-3 p-2.5 bg-white rounded-xl border border-rose-200 text-[11px] text-brand-dark">
+                                <strong>Host Reward:</strong> The accommodating member receives a <strong>$250.00
+                                    Exchange Credit</strong> to use as payment for their next swap!
+                            </div>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-rose-200 text-[11px] text-brand-red font-semibold">
+                            <i class="fa-solid fa-star mr-1"></i> Cost is less than 2 nights at any standard hotel
+                        </div>
+                    </div>
+
+                    <div
+                        class="border-2 border-brand-border hover:border-brand-dark rounded-3xl p-6 bg-white transition flex flex-col justify-between">
+                        <div>
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-brand-gray">Annual Dues &
+                                Waiver</span>
+                            <h3 class="text-xl font-bold text-brand-dark mt-1">Annual Membership</h3>
+                            <div class="mt-4 flex items-baseline gap-1">
+                                <span class="text-3xl font-extrabold text-brand-dark">$99.95</span>
+                                <span class="text-xs text-emerald-700 font-bold ml-2">WAIVED FIRST YEAR</span>
+                            </div>
+                            <p class="text-xs text-brand-gray mt-3 leading-relaxed">
+                                First year membership fee is waived when <strong>four or more pictures</strong> are
+                                submitted. Why? Because the more property pictures on our Network, the better we serve
+                                all members.
+                            </p>
+                            <div
+                                class="mt-3 p-2.5 bg-gray-50 rounded-xl border border-gray-200 text-[11px] text-brand-gray">
+                                <strong>Photo Promotion:</strong> First photo is free. Include up to 8 photos for a
+                                one-time fee of <strong>$5.00</strong>, and receive a <strong>$50.00 discount</strong>
+                                off your first exchange!
+                            </div>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-gray-100 text-[11px] text-emerald-700 font-semibold">
+                            <i class="fa-solid fa-gift mr-1.5"></i> $50 First Exchange Bonus with 8 photos
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- #################### PAGE 4: FAQ & APPLICATION #################### -->
+        <section id="page-faq-contact" class="spa-page hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+
+                <!-- Left: FAQ Accordions -->
+                <div class="lg:col-span-7">
+                    <div class="mb-6">
+                        <span class="text-xs font-bold text-brand-red uppercase tracking-wider">Member Help
+                            Center</span>
+                        <h1 class="text-3xl font-extrabold text-brand-dark mt-1">Frequently Asked Questions</h1>
+                        <p class="text-xs text-brand-gray mt-1">Common inquiries about our vacation home exchange rules
+                            and policies.</p>
+                    </div>
+
+                    <div class="space-y-3" id="faqAccordion">
+
+                        <div class="border border-brand-border rounded-2xl overflow-hidden">
+                            <button onclick="toggleFaq(1)"
+                                class="w-full text-left px-5 py-4 font-bold text-xs sm:text-sm text-brand-dark flex justify-between items-center bg-white hover:bg-gray-50 transition">
+                                <span>How easy is it to make an exchange?</span>
+                                <i id="faq-icon-1" class="fa-solid fa-chevron-down text-xs text-gray-400"></i>
+                            </button>
+                            <div id="faq-ans-1"
+                                class="px-5 pb-4 pt-1 text-xs text-brand-gray leading-relaxed bg-white border-t border-gray-100">
+                                You'll find that arranging a house exchange with The VacationExchange Network is very
+                                easy. In fact, a survey among members identified that it generally takes <strong>less
+                                    than three contacts to arrange an exchange</strong>. Two unique features make this
+                                possible: first, every home in our Network is a vacation or second home ensuring
+                                non-simultaneous flexibility; second, our Direct and Indirect credit system eliminates
+                                the need to find an owner who wants to visit your home at the same time.
+                            </div>
+                        </div>
+
+                        <div class="border border-brand-border rounded-2xl overflow-hidden">
+                            <button onclick="toggleFaq(2)"
+                                class="w-full text-left px-5 py-4 font-bold text-xs sm:text-sm text-brand-dark flex justify-between items-center bg-white hover:bg-gray-50 transition">
+                                <span>Does The VacationExchange Network staff arrange the exchanges?</span>
+                                <i id="faq-icon-2" class="fa-solid fa-chevron-down text-xs text-gray-400"></i>
+                            </button>
+                            <div id="faq-ans-2"
+                                class="hidden px-5 pb-4 pt-1 text-xs text-brand-gray leading-relaxed bg-white border-t border-gray-100">
+                                Yes! When you are ready to plan your vacation, simply tell us where you want to go and
+                                when, and our Exchange Coordinators will perform all initial searching for you. We then
+                                put you in touch with interested owners so you can finalize dates and details. Direct
+                                contact between members ensures you get to know the individuals using your home and
+                                review specific house rules.
+                            </div>
+                        </div>
+
+                        <div class="border border-brand-border rounded-2xl overflow-hidden">
+                            <button onclick="toggleFaq(3)"
+                                class="w-full text-left px-5 py-4 font-bold text-xs sm:text-sm text-brand-dark flex justify-between items-center bg-white hover:bg-gray-50 transition">
+                                <span>Why do you limit your Network to vacation and second homes?</span>
+                                <i id="faq-icon-3" class="fa-solid fa-chevron-down text-xs text-gray-400"></i>
+                            </button>
+                            <div id="faq-ans-2"
+                                class="hidden px-5 pb-4 pt-1 text-xs text-brand-gray leading-relaxed bg-white border-t border-gray-100">
+                                Established in 1997, The VacationExchange Network remains the only program consisting
+                                entirely of vacation and second homes. This limitation is central to our ability to
+                                arrange more swaps than any other company. Because owners do not live in these homes
+                                day-to-day, non-simultaneous travel is seamless and guests can stay even if the host
+                                travels elsewhere.
+                            </div>
+                        </div>
+
+                        <div class="border border-brand-border rounded-2xl overflow-hidden">
+                            <button onclick="toggleFaq(4)"
+                                class="w-full text-left px-5 py-4 font-bold text-xs sm:text-sm text-brand-dark flex justify-between items-center bg-white hover:bg-gray-50 transition">
+                                <span>Must exchanges take place during the same week(s)?</span>
+                                <i id="faq-icon-4" class="fa-solid fa-chevron-down text-xs text-gray-400"></i>
+                            </button>
+                            <div id="faq-ans-4"
+                                class="hidden px-5 pb-4 pt-1 text-xs text-brand-gray leading-relaxed bg-white border-t border-gray-100">
+                                No. Since all homes in our Network are holiday or second homes, swaps do not need to be
+                                simultaneous. You may choose to take your ski trip to Colorado in February and allow
+                                your home in Hilton Head or Maui to be enjoyed by your exchange partner in July.
+                            </div>
+                        </div>
+
+                        <div class="border border-brand-border rounded-2xl overflow-hidden">
+                            <button onclick="toggleFaq(5)"
+                                class="w-full text-left px-5 py-4 font-bold text-xs sm:text-sm text-brand-dark flex justify-between items-center bg-white hover:bg-gray-50 transition">
+                                <span>Do you accept timeshares?</span>
+                                <i id="faq-icon-5" class="fa-solid fa-chevron-down text-xs text-gray-400"></i>
+                            </button>
+                            <div id="faq-ans-5"
+                                class="hidden px-5 pb-4 pt-1 text-xs text-brand-gray leading-relaxed bg-white border-t border-gray-100">
+                                No. We strictly exclude timeshares. Only single-family homes, luxury condominiums,
+                                townhomes, and chalets held under sole ownership are eligible. VEN reserves the right to
+                                verify property value and deed status before accepting membership.
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="mt-8 p-5 bg-gray-50 rounded-2xl border border-brand-border flex items-center justify-between">
+                        <div>
+                            <p class="font-bold text-xs text-brand-dark">Have questions about your specific property?
+                            </p>
+                            <p class="text-[11px] text-brand-gray">Our exchange coordinators are available Monday
+                                through Friday 9:00 AM – 6:00 PM EST.</p>
+                        </div>
+                        <a href="tel:561-509-0126"
+                            class="text-xs font-bold text-brand-red border border-rose-200 bg-white px-3.5 py-2 rounded-xl hover:bg-rose-50 transition flex items-center gap-1.5 flex-shrink-0">
+                            <i class="fa-solid fa-phone"></i> 561-509-0126
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Registration Form -->
+                <div class="lg:col-span-5">
+                    <div class="border border-brand-border rounded-3xl p-6 sm:p-7 bg-white shadow-xl sticky top-24">
+
+                        <div class="border-b border-gray-100 pb-4 mb-5">
+                            <div class="flex items-center justify-between">
+                                <span
+                                    class="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full">First
+                                    Year Free Offer</span>
+                                <span class="text-[11px] text-brand-gray">No Upfront Payment</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-brand-dark mt-2">Vacation Home Application</h3>
+                            <p class="text-[11px] text-brand-gray mt-1">Submit 4+ photos to waive the $99.95 first-year
+                                membership fee.</p>
+                        </div>
+
+                        <form onsubmit="handleRegistrationSubmit(event)" class="space-y-3.5 text-xs">
+
+                            <div>
+                                <label class="block font-semibold text-brand-dark mb-1">Your Full Name & Email *</label>
+                                <div class="grid grid-cols-2 gap-2">
+                                    <input type="text" required placeholder="Full Name"
+                                        class="border border-brand-border rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-brand-dark">
+                                    <input type="email" required placeholder="name@domain.com"
+                                        class="border border-brand-border rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-brand-dark">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block font-semibold text-brand-dark mb-1">Phone Number (For Coordinator
+                                    Introduction)</label>
+                                <input type="tel" required placeholder="e.g. 561-509-0126"
+                                    class="w-full border border-brand-border rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-brand-dark">
+                            </div>
+
+                            <div>
+                                <label class="block font-semibold text-brand-dark mb-1">Vacation Property Location &
+                                    Type *</label>
+                                <div class="grid grid-cols-2 gap-2">
+                                    <input type="text" required placeholder="City, State / Country"
+                                        class="border border-brand-border rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-brand-dark">
+                                    <select
+                                        class="border border-brand-border rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-brand-dark bg-white font-medium text-brand-dark">
+                                        <option value="Beach">Beach Resort</option>
+                                        <option value="Mountain/Ski">Mountain / Ski Chalet</option>
+                                        <option value="International">International Villa</option>
+                                        <option value="Lake & River">Lake & River Cabin</option>
+                                        <option value="Desert">Desert Retreat</option>
+                                        <option value="Urban">Urban Luxury Flat</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block font-semibold text-brand-dark mb-1">Bedrooms & Bathrooms</label>
+                                <div class="grid grid-cols-2 gap-2">
+                                    <input type="number" min="1" max="15" value="3" placeholder="Bedrooms"
+                                        class="border border-brand-border rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-brand-dark">
+                                    <input type="number" min="1" max="15" value="3" placeholder="Bathrooms"
+                                        class="border border-brand-border rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-brand-dark">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block font-semibold text-brand-dark mb-1">Property Description (Up to
+                                    4,000 characters)</label>
+                                <textarea rows="3"
+                                    placeholder="Describe amenities, view, sleeping accommodations, and local attractions..."
+                                    class="w-full border border-brand-border rounded-xl p-2.5 text-xs focus:outline-none focus:border-brand-dark"></textarea>
+                            </div>
+
+                            <div class="bg-gray-50 p-3 rounded-xl border border-gray-200">
+                                <label class="block font-bold text-brand-dark mb-1.5 text-[11px]">Photo Upload & Fee
+                                    Waiver Option:</label>
+                                <div class="space-y-1.5 text-[11px] text-brand-gray">
+                                    <label class="flex items-start gap-2 cursor-pointer">
+                                        <input type="radio" name="photoPlan" checked
+                                            class="mt-0.5 text-brand-red focus:ring-0">
+                                        <span><strong>Free Plan (4+ Pictures):</strong> First year $99.95 membership fee
+                                            waived.</span>
+                                    </label>
+                                    <label class="flex items-start gap-2 cursor-pointer">
+                                        <input type="radio" name="photoPlan" class="mt-0.5 text-brand-red focus:ring-0">
+                                        <span><strong>8 Pictures Promotion ($5.00):</strong> Membership waived + receive
+                                            $50 discount on 1st swap.</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="text-[10px] text-brand-gray leading-tight pt-1">
+                                By clicking Submit Application, you certify that this home is a dedicated
+                                vacation/second property under sole ownership (not a timeshare), and agree that VEN
+                                receives compensation only when an exchange is finalized.
+                            </div>
+
+                            <button type="submit"
+                                class="w-full bg-brand-red hover:bg-rose-600 text-white font-bold py-3 rounded-xl transition text-xs shadow-md">
+                                Submit Membership Application
+                            </button>
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ================= PROPERTY DETAIL QUICK-VIEW MODAL ================= -->
+    <div id="propertyModal"
+        class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl relative">
+
+            <button onclick="closePropertyModal()"
+                class="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-white/90 hover:bg-white text-brand-dark flex items-center justify-center shadow-md transition">
+                <i class="fa-solid fa-xmark text-sm"></i>
+            </button>
+
+            <div class="relative h-64 sm:h-72 w-full bg-gray-100 overflow-hidden">
+                <img id="modalImg" src="" alt="House Exterior" class="w-full h-full object-cover">
+                <div class="absolute bottom-3 left-4 flex gap-2">
+                    <span id="modalBadge"
+                        class="bg-white/95 text-brand-dark text-[11px] font-bold px-3 py-1 rounded-full shadow-sm"></span>
+                    <span class="bg-emerald-600 text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-sm">Sole
+                        Ownership Verified</span>
+                </div>
+            </div>
+
+            <div class="p-6">
+                <div class="flex items-start justify-between gap-4">
+                    <div>
+                        <h2 id="modalTitle" class="text-xl font-bold text-brand-dark"></h2>
+                        <p id="modalLocation" class="text-xs text-brand-gray mt-0.5"></p>
+                    </div>
+                    <div class="text-right">
+                        <span id="modalRating" class="text-sm font-bold text-brand-dark">★ 4.95</span>
+                        <p class="text-[11px] text-emerald-700 font-semibold">Proof-of-Value Protected</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-3 gap-3 my-4 py-3 border-y border-gray-100 text-center text-xs">
+                    <div>
+                        <span class="text-brand-gray block text-[10px] uppercase">Bedrooms</span>
+                        <span id="modalBeds" class="font-bold text-brand-dark text-sm">4 Beds</span>
+                    </div>
+                    <div>
+                        <span class="text-brand-gray block text-[10px] uppercase">Exchange Type</span>
+                        <span id="modalType" class="font-bold text-brand-red text-sm">Direct / Indirect</span>
+                    </div>
+                    <div>
+                        <span class="text-brand-gray block text-[10px] uppercase">Coordinator Fee</span>
+                        <span class="font-bold text-brand-dark text-sm">$250 Flat (Swap)</span>
+                    </div>
+                </div>
+
+                <p id="modalDesc" class="text-xs text-brand-gray leading-relaxed mb-6"></p>
+
+                <div class="flex items-center gap-3">
+                    <button onclick="requestExchangeMatch()"
+                        class="flex-1 bg-brand-red hover:bg-rose-600 text-white font-bold py-3 rounded-xl transition text-xs shadow-md">
+                        Request Coordinator Introduction
+                    </button>
+                    <a href="tel:561-509-0126"
+                        class="border border-brand-border hover:bg-gray-50 text-brand-dark font-semibold px-4 py-3 rounded-xl transition text-xs flex items-center gap-1.5">
+                        <i class="fa-solid fa-phone text-brand-terracotta"></i> 561-509-0126
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ================= ROI CALCULATOR MODAL ================= -->
+    <div id="savingsModal"
+        class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative">
+
+            <button onclick="closeSavingsModal()" class="absolute top-4 right-4 text-brand-gray hover:text-brand-dark">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <span class="text-[11px] font-bold uppercase tracking-wider text-brand-red">VEN Value Estimator</span>
+            <h3 class="text-xl font-bold text-brand-dark mt-1">Vacation Lodging vs Exchange Cost</h3>
+            <p class="text-xs text-brand-gray mt-1">See how much you save traveling through second home exchanges versus
+                paying hotel/rental retail.</p>
+
+            <div class="my-6 space-y-4 text-xs">
+                <div>
+                    <div class="flex justify-between font-semibold mb-1">
+                        <span>Vacation Nights Per Year</span>
+                        <span id="nightsVal" class="text-brand-red font-bold">14 Nights</span>
+                    </div>
+                    <input type="range" min="3" max="30" value="14" id="nightsInput" oninput="calcSavings()"
+                        class="w-full accent-brand-red">
+                </div>
+
+                <div>
+                    <div class="flex justify-between font-semibold mb-1">
+                        <span>Average Luxury Hotel / Villa Rate</span>
+                        <span id="rateVal" class="text-brand-red font-bold">$450 / night</span>
+                    </div>
+                    <input type="range" min="150" max="1500" step="50" value="450" id="rateInput"
+                        oninput="calcSavings()" class="w-full accent-brand-red">
+                </div>
+            </div>
+
+            <div class="bg-rose-50/50 border border-rose-100 rounded-2xl p-4 text-center">
+                <p class="text-[11px] uppercase tracking-wider text-brand-gray font-semibold">Your Estimated Lodging
+                    Savings</p>
+                <p id="totalSavingsDisplay" class="text-3xl font-extrabold text-brand-red mt-1">$5,800.00 / yr</p>
+                <p class="text-[11px] text-emerald-700 font-semibold mt-1">Based on 2 direct exchanges ($250 each) vs
+                    hotel rack rates</p>
+            </div>
+
+            <button onclick="closeSavingsModal(); openApplyModal()"
+                class="w-full mt-5 bg-brand-dark hover:bg-black text-white font-bold py-3 rounded-xl transition text-xs">
+                Apply Now to Lock In $0 Upfront Fee
+            </button>
+
+        </div>
+    </div>
+
+    <!-- ================= APPLICATION MODAL ================= -->
+    <div id="applyModal"
+        class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl relative">
+
+            <button onclick="closeApplyModal()" class="absolute top-4 right-4 text-brand-gray hover:text-brand-dark">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <span
+                class="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full uppercase tracking-wider">Proof
+                of Value Guarantee</span>
+            <h3 class="text-xl font-bold text-brand-dark mt-2">Join The Vacation Exchange Network</h3>
+            <p class="text-xs text-brand-gray mt-1">List your vacation home today. No payment is required until you
+                arrange an exchange.</p>
+
+            <form onsubmit="handleRegistrationSubmit(event)" class="mt-5 space-y-3.5 text-xs">
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block font-semibold mb-1">Your Full Name</label>
+                        <input type="text" required placeholder="First & Last Name"
+                            class="w-full border border-brand-border rounded-xl p-2.5 focus:outline-none focus:border-brand-dark">
+                    </div>
+                    <div>
+                        <label class="block font-semibold mb-1">Email Address</label>
+                        <input type="email" required placeholder="owner@gmail.com"
+                            class="w-full border border-brand-border rounded-xl p-2.5 focus:outline-none focus:border-brand-dark">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block font-semibold mb-1">Property Location</label>
+                        <input type="text" required placeholder="e.g. Aspen, CO or Destin, FL"
+                            class="w-full border border-brand-border rounded-xl p-2.5 focus:outline-none focus:border-brand-dark">
+                    </div>
+                    <div>
+                        <label class="block font-semibold mb-1">Property Category</label>
+                        <select
+                            class="w-full border border-brand-border rounded-xl p-2.5 focus:outline-none focus:border-brand-dark bg-white font-medium">
+                            <option>Beach</option>
+                            <option>Mountain / Ski</option>
+                            <option>International</option>
+                            <option>Lake & River</option>
+                            <option>Desert</option>
+                            <option>Urban</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block font-semibold mb-1">Desired Exchange Destinations</label>
+                    <input type="text" placeholder="Where do you want to travel? (e.g. Hawaii, Swiss Alps, Italy...)"
+                        class="w-full border border-brand-border rounded-xl p-2.5 focus:outline-none focus:border-brand-dark">
+                </div>
+
+                <div class="p-3 bg-gray-50 rounded-xl border border-gray-200 text-[11px] text-brand-gray leading-tight">
+                    <i class="fa-solid fa-camera mr-1 text-brand-terracotta"></i>
+                    <strong>Photo Waiver:</strong> Submit 4 or more pictures of your second home to receive your 1st
+                    year annual membership ($99.95) completely free.
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-brand-red hover:bg-rose-600 text-white font-bold py-3 rounded-xl transition text-xs shadow-md">
+                    Complete Free Listing Application
+                </button>
+            </form>
+
+        </div>
+    </div>
+
+    <!-- ================= GLOBAL TOAST ================= -->
+    <div id="toast"
+        class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 bg-brand-dark text-white text-xs px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3">
+        <i class="fa-solid fa-circle-check text-emerald-400 text-sm"></i>
+        <span id="toastMsg">Notification message</span>
+    </div>
+
+    <!-- ================= AIRBNB MATCHED FOOTER ================= -->
+    <footer class="bg-white border-t border-brand-border mt-auto text-xs text-brand-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 pb-8 border-b border-gray-100">
+                <div>
+                    <h4 class="font-bold text-brand-dark mb-3 text-xs">About The Vacation Exchange</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="javascript:void(0)" onclick="navigateTo('unique-features')"
+                                class="hover:underline">Established in 1997</a></li>
+                        <li><a href="javascript:void(0)" onclick="navigateTo('unique-features')"
+                                class="hover:underline">Unique Features</a></li>
+                        <li><a href="javascript:void(0)" onclick="navigateTo('unique-features')"
+                                class="hover:underline">Why Use Our Network</a></li>
+                        <li><a href="javascript:void(0)" onclick="navigateTo('how-it-works')"
+                                class="hover:underline">Direct & Indirect Swaps</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-brand-dark mb-3 text-xs">Property Categories</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="javascript:void(0)" onclick="filterCategory('Beach')" class="hover:underline">Beach
+                                Properties</a></li>
+                        <li><a href="javascript:void(0)" onclick="filterCategory('Mountain/Ski')"
+                                class="hover:underline">Mountain & Ski Chalets</a></li>
+                        <li><a href="javascript:void(0)" onclick="filterCategory('International')"
+                                class="hover:underline">International Villas</a></li>
+                        <li><a href="javascript:void(0)" onclick="filterCategory('Lake & River')"
+                                class="hover:underline">Lake & River Lodges</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-brand-dark mb-3 text-xs">Exchange Assistance</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="tel:561-509-0126" class="hover:underline font-semibold text-brand-dark"><i
+                                    class="fa-solid fa-phone mr-1 text-brand-terracotta"></i> 561-509-0126</a></li>
+                        <li><a href="javascript:void(0)" onclick="navigateTo('faq-contact')"
+                                class="hover:underline">Concierge Matchmaking</a></li>
+                        <li><a href="javascript:void(0)" onclick="navigateTo('how-it-works')"
+                                class="hover:underline">Fee Schedules & Credits</a></li>
+                        <li><a href="javascript:void(0)" onclick="navigateTo('faq-contact')"
+                                class="hover:underline">Frequently Asked Questions</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-brand-dark mb-3 text-xs">The VEN Charter</h4>
+                    <p class="text-[11px] leading-relaxed text-brand-gray">
+                        The largest network dedicated exclusively to holiday second homes. No timeshares. No primary
+                        homes. We prove our value before you pay.
+                    </p>
+                    <div class="mt-3">
+                        <span
+                            class="inline-flex items-center gap-1.5 text-[11px] font-bold text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-lg">
+                            <i class="fa-solid fa-shield-halved"></i> $0 Upfront Fee Guarantee
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
+                <div class="flex flex-wrap items-center gap-4 text-brand-gray">
+                    <span class="font-bold text-brand-dark">© 1997–2026 The Vacation Exchange Network, Inc.</span>
+                    <a href="javascript:void(0)" onclick="navigateTo('how-it-works')" class="hover:underline">Links</a>
+                    <a href="javascript:void(0)"
+                        onclick="showToast('Careers: Exchange coordinator inquiries welcome at 561-509-0126')"
+                        class="hover:underline">Career</a>
+                    <a href="javascript:void(0)"
+                        onclick="showToast('Member privacy: Personal contact details are protected until match agreed.')"
+                        class="hover:underline">Privacy</a>
+                    <a href="tel:561-509-0126" class="hover:underline">Contact</a>
+                </div>
+
+                <div class="flex items-center gap-2 font-bold text-brand-dark">
+                    <i class="fa-solid fa-shield-cat text-brand-dark text-sm"></i>
+                    <span>Proof-of-value guarantee</span>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- ================= JAVASCRIPT LOGIC ================= -->
+    <script>
+        // STRICTLY EXTERIOR ARCHITECTURE PHOTOS ONLY
+        const propertyDatabase = [
+            {
+                id: 'VEN-101',
+                title: 'Modern Beachfront Retreat',
+                location: 'Malibu, California, USA',
+                category: 'Beach',
+                bedrooms: 4,
+                baths: 4,
+                img: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80',
+                badge: 'Guest Favorite',
+                deed: 'Deed Verified',
+                exchangeType: 'Direct or Indirect',
+                keysCost: 'Available: Indirect Exchange / 3 Keys/Week',
+                desc: 'Custom modern oceanfront residence sitting directly above the Pacific coastline. Features cantilevered ocean terraces, floor-to-ceiling glass pavilions, and direct private beach stairway access. Sole deed second home with flexible exchange calendar throughout spring and fall.'
+            },
+            {
+                id: 'VEN-102',
+                title: 'Alpine Ski Chalet',
+                location: 'Zermatt, Valais, Switzerland',
+                category: 'Mountain/Ski',
+                bedrooms: 5,
+                baths: 5,
+                img: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80',
+                badge: 'Mountain',
+                deed: 'Deed Verified',
+                exchangeType: 'Direct or Indirect',
+                keysCost: 'Available: Indirect Exchange / 3 Keys/Week',
+                desc: 'Traditional timber-and-stone Swiss ski chalet overlooking the Matterhorn. True ski-in/ski-out access, wraparound snow balconies, heated gear room, and outdoor cedar barrel sauna. Dedicated winter retreat with owner open to non-simultaneous summer coastal exchanges.'
+            },
+            {
+                id: 'VEN-103',
+                title: 'Mediterranean Villa',
+                location: 'Marbella, Andalusia, Spain',
+                category: 'International',
+                bedrooms: 4,
+                baths: 4,
+                img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80',
+                badge: 'International',
+                deed: 'Deed Verified',
+                exchangeType: 'Direct or Indirect',
+                keysCost: 'Available: Indirect Exchange / 3 Keys/Week',
+                desc: 'White-stucco Mediterranean second home with terracotta tile roofs, arched cloister corridors, private olive courtyard, and infinity swimming pool. 10 minutes to Puerto Banús. Owner looking for exchanges in Colorado ski resorts or New York.'
+            },
+            {
+                id: 'VEN-104',
+                title: 'Lake & River Cabin',
+                location: 'Lake Tahoe, Nevada, USA',
+                category: 'Lake & River',
+                bedrooms: 3,
+                baths: 3,
+                img: 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=800&q=80',
+                badge: 'Lake & River',
+                deed: 'Deed Verified',
+                exchangeType: 'Direct or Indirect',
+                keysCost: 'Available: Indirect Exchange / 3 Keys/Week',
+                desc: 'Handcrafted log timber waterfront lodge surrounded by towering sugar pines. Includes private deep-water boat dock, stone fireplace hearth, and broad cedar viewing deck over emerald waters. Exclusively used as a weekend holiday sanctuary.'
+            },
+            {
+                id: 'VEN-105',
+                title: 'Contemporary Coastal Villa',
+                location: 'Cabo San Lucas, Mexico',
+                category: 'Beach',
+                bedrooms: 4,
+                baths: 5,
+                img: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80',
+                badge: 'Guest Favorite',
+                deed: 'Deed Verified',
+                exchangeType: 'Direct or Indirect',
+                keysCost: 'Available: Indirect Exchange / 3 Keys/Week',
+                desc: 'Spectacular modernist coastal villa overlooking the Sea of Cortez. Multi-level whitewashed architecture, sun terraces, private infinity edge plunge pool, and outdoor gourmet kitchen. Solely owned vacation property.'
+            },
+            {
+                id: 'VEN-106',
+                title: 'Chalet Winter Mountain Lodge',
+                location: 'Aspen, Colorado, USA',
+                category: 'Mountain/Ski',
+                bedrooms: 5,
+                baths: 6,
+                img: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80',
+                badge: 'Guest Favorite',
+                deed: 'Deed Verified',
+                exchangeType: 'Direct or Indirect',
+                keysCost: 'Available: Indirect Exchange / 3 Keys/Week',
+                desc: 'Stone-and-timber craftsman lodge on Red Mountain. Expansive glass gables, two-car heated garage, outdoor heated hot tub, and panoramic views of the Aspen Highlands. Available for both direct reciprocal swaps and credit keys.'
+            },
+            {
+                id: 'VEN-107',
+                title: 'Lake Mountain Cabin',
+                location: 'Coeur d’Alene, Idaho, USA',
+                category: 'Lake & River',
+                bedrooms: 3,
+                baths: 3,
+                img: 'https://images.unsplash.com/photo-1448630360428-65456885c650?auto=format&fit=crop&w=800&q=80',
+                badge: 'Guest Favorite',
+                deed: 'Deed Verified',
+                exchangeType: 'Direct or Indirect',
+                keysCost: 'Available: Indirect Exchange / 3 Keys/Week',
+                desc: 'Classic cedar-shingle lake home elevated with direct shoreline vistas. Covered porch wrapping around the exterior, private pontoon dock, and stone barbecue pit. Available spring through autumn.'
+            },
+            {
+                id: 'VEN-108',
+                title: 'Desert Palm Estate',
+                location: 'Scottsdale, Arizona, USA',
+                category: 'Desert',
+                bedrooms: 4,
+                baths: 4,
+                img: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80',
+                badge: 'Guest Favorite',
+                deed: 'Deed Verified',
+                exchangeType: 'Direct or Indirect',
+                keysCost: 'Available: Indirect Exchange / 3 Keys/Week',
+                desc: 'Single-story Santa Fe architecture estate featuring adobe construction, private cactus gardens, heated saltwater pool, and shaded ramadas with Camelback Mountain views. Perfect winter retreat.'
+            }
+        ];
+
+        let currentCategory = 'Beach';
+        let wishlist = new Set();
+
+        function renderProperties(list) {
+            const grid = document.getElementById('propertyGrid');
+            const countLabel = document.getElementById('propertyCountLabel');
+
+            if (!list || list.length === 0) {
+                grid.innerHTML = `
+          <div class="col-span-full py-16 text-center">
+            <i class="fa-solid fa-house-circle-xmark text-4xl text-gray-300 mb-3"></i>
+            <h3 class="text-base font-bold text-brand-dark">No vacation homes matched this search</h3>
+            <p class="text-xs text-brand-gray mt-1">Try another category or contact our concierge coordinators directly at 561-509-0126.</p>
+            <button onclick="filterCategory('Beach')" class="mt-4 px-4 py-2 bg-brand-dark text-white rounded-xl text-xs font-semibold">View All Beach Properties</button>
+          </div>
+        `;
+                if (countLabel) countLabel.innerText = '0 properties found';
+                return;
+            }
+
+            if (countLabel) countLabel.innerText = `Showing ${list.length} verified second homes`;
+
+            grid.innerHTML = list.map(item => {
+                const isFav = wishlist.has(item.id);
+                return `
+          <div class="group cursor-pointer card-zoom" onclick="openPropertyModal('${item.id}')">
+            
+            <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gray-100 mb-3 shadow-sm border border-gray-100">
+              <img src="${item.img}" alt="${item.title}" class="card-img w-full h-full object-cover">
+              
+              <div class="absolute top-3 left-3 flex flex-col gap-1 z-10">
+                <span class="bg-white/95 backdrop-blur-sm text-brand-dark font-bold text-[11px] px-2.5 py-1 rounded-full shadow-sm">
+                  ${item.badge}
+                </span>
+                ${item.deed ? `
+                  <span class="bg-emerald-600/95 backdrop-blur-sm text-white font-bold text-[10px] px-2 py-0.5 rounded-full shadow-sm w-fit">
+                    ${item.deed}
+                  </span>
+                ` : ''}
+              </div>
+
+              <button onclick="toggleWishlist(event, '${item.id}')" class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full flex items-center justify-center text-white hover:scale-110 transition drop-shadow-md">
+                <i class="${isFav ? 'fa-solid text-brand-red' : 'fa-regular text-white'} fa-heart text-lg"></i>
+              </button>
+
+              <div class="absolute bottom-3 right-3 bg-black/60 backdrop-blur-sm text-white text-[10px] font-medium px-2 py-0.5 rounded-md flex items-center gap-1">
+                <i class="fa-solid fa-camera text-[9px]"></i> Photo
+              </div>
+              <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-white shadow-sm"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-white/60"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-white/60"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-white/60"></span>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-start text-xs">
+              <div class="pr-2">
+                <h3 class="font-bold text-sm text-brand-dark group-hover:text-brand-red transition truncate w-48 sm:w-56">${item.title}</h3>
+                <p class="text-brand-gray text-[11px] truncate mt-0.5">${item.location}</p>
+                <p class="text-[11px] text-brand-dark font-medium mt-1">${item.keysCost}</p>
+              </div>
+              <div class="flex items-center gap-1 text-xs font-bold text-brand-dark flex-shrink-0">
+                <i class="fa-solid fa-star text-[11px] text-brand-red"></i>
+                <span>4.95</span>
+              </div>
+            </div>
+
+          </div>
+        `;
+            }).join('');
+        }
+
+        function filterCategory(cat) {
+            currentCategory = cat;
+            document.querySelectorAll('.cat-pill').forEach(btn => {
+                btn.classList.remove('active', 'border-brand-dark', 'text-brand-dark', 'font-semibold');
+                btn.classList.add('border-transparent', 'text-brand-gray', 'font-medium');
+            });
+
+            const activeBtn = Array.from(document.querySelectorAll('.cat-pill')).find(btn => btn.innerText.includes(cat));
+            if (activeBtn) {
+                activeBtn.classList.add('active', 'border-brand-dark', 'text-brand-dark', 'font-semibold');
+                activeBtn.classList.remove('border-transparent', 'text-brand-gray', 'font-medium');
+            }
+
+            navigateTo('explore');
+            const filtered = propertyDatabase.filter(p => p.category === cat);
+            renderProperties(filtered.length ? filtered : propertyDatabase);
+        }
+
+        function applySearchFilter() {
+            const query = document.getElementById('liveSearchInput').value.toLowerCase().trim();
+            navigateTo('explore');
+            if (!query) {
+                renderProperties(propertyDatabase);
+                return;
+            }
+            const matches = propertyDatabase.filter(p =>
+                p.title.toLowerCase().includes(query) ||
+                p.location.toLowerCase().includes(query) ||
+                p.category.toLowerCase().includes(query) ||
+                p.desc.toLowerCase().includes(query)
+            );
+            renderProperties(matches);
+        }
+
+        function focusSearch() {
+            navigateTo('explore');
+            const input = document.getElementById('liveSearchInput');
+            input.focus();
+        }
+
+        function toggleWishlist(e, id) {
+            e.stopPropagation();
+            if (wishlist.has(id)) {
+                wishlist.delete(id);
+                showToast('Removed from saved vacation homes');
+            } else {
+                wishlist.add(id);
+                showToast('Saved to your preferred exchange homes');
+            }
+            applySearchFilter();
+        }
+
+        function navigateTo(pageId) {
+            document.querySelectorAll('.spa-page').forEach(page => page.classList.add('hidden'));
+            const target = document.getElementById(`page-${pageId}`);
+            if (target) {
+                target.classList.remove('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            document.querySelectorAll('header nav button').forEach(b => {
+                b.classList.remove('text-brand-red', 'font-bold');
+                b.classList.add('text-brand-dark');
+            });
+            const activeNav = document.getElementById(`nav-btn-${pageId}`);
+            if (activeNav) {
+                activeNav.classList.add('text-brand-red', 'font-bold');
+            }
+
+            const catHeader = document.getElementById('categoryHeader');
+            if (catHeader) {
+                if (pageId === 'explore') {
+                    catHeader.classList.remove('hidden');
+                } else {
+                    catHeader.classList.add('hidden');
+                }
+            }
+        }
+
+        function toggleUserDropdown() {
+            const drop = document.getElementById('userDropdown');
+            drop.classList.toggle('hidden');
+        }
+
+        document.addEventListener('click', (e) => {
+            const drop = document.getElementById('userDropdown');
+            if (!e.target.closest('#userDropdown') && !e.target.closest('button[onclick*="toggleUserDropdown"]')) {
+                drop.classList.add('hidden');
+            }
+        });
+
+        function openPropertyModal(id) {
+            const item = propertyDatabase.find(p => p.id === id);
+            if (!item) return;
+
+            document.getElementById('modalImg').src = item.img;
+            document.getElementById('modalTitle').innerText = item.title;
+            document.getElementById('modalLocation').innerText = `${item.location} • Category: ${item.category}`;
+            document.getElementById('modalBadge').innerText = item.badge;
+            document.getElementById('modalBeds').innerText = `${item.bedrooms} Beds, ${item.baths} Baths`;
+            document.getElementById('modalType').innerText = item.exchangeType;
+            document.getElementById('modalDesc').innerText = item.desc;
+
+            document.getElementById('propertyModal').classList.remove('hidden');
+        }
+
+        function closePropertyModal() {
+            document.getElementById('propertyModal').classList.add('hidden');
+        }
+
+        function requestExchangeMatch() {
+            closePropertyModal();
+            showToast('Exchange inquiry sent to coordinator. We will contact you shortly.');
+        }
+
+        function toggleFaq(num) {
+            const ans = document.getElementById(`faq-ans-${num}`);
+            const icon = document.getElementById(`faq-icon-${num}`);
+            if (ans.classList.contains('hidden')) {
+                ans.classList.remove('hidden');
+                icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+            } else {
+                ans.classList.add('hidden');
+                icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+            }
+        }
+
+        function openSavingsModal() {
+            document.getElementById('savingsModal').classList.remove('hidden');
+            calcSavings();
+        }
+
+        function closeSavingsModal() {
+            document.getElementById('savingsModal').classList.add('hidden');
+        }
+
+        function calcSavings() {
+            const nights = parseInt(document.getElementById('nightsInput').value);
+            const rate = parseInt(document.getElementById('rateInput').value);
+
+            document.getElementById('nightsVal').innerText = `${nights} Nights`;
+            document.getElementById('rateVal').innerText = `$${rate} / night`;
+
+            const hotelCost = nights * rate;
+            const exchangesNeeded = Math.ceil(nights / 7);
+            const venCost = exchangesNeeded * 250;
+            const savings = Math.max(0, hotelCost - venCost);
+
+            document.getElementById('totalSavingsDisplay').innerText = `$${savings.toLocaleString()}.00 / yr`;
+        }
+
+        function openApplyModal() {
+            document.getElementById('applyModal').classList.remove('hidden');
+        }
+
+        function closeApplyModal() {
+            document.getElementById('applyModal').classList.add('hidden');
+        }
+
+        function handleRegistrationSubmit(e) {
+            e.preventDefault();
+            closeApplyModal();
+            showToast('Application submitted! First year membership waived with 4+ photos.');
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMsg');
+            toastMsg.innerText = msg;
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-24', 'opacity-0');
+            }, 4000);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProperties(propertyDatabase);
+        });
+    </script>
+</body>
+
+</html>
